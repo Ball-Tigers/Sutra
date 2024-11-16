@@ -14,6 +14,9 @@ extends Node
 @export var player_size = 1
 const max_player_size = 5
 
+# Duplication
+@export var projectile_force = 100
+
 var gravity: int = ProjectSettings.get_setting("physics/2d/default_gravity")
 
 ## Hold a reference to the parent so that it can be controlled by the state
