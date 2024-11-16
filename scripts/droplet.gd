@@ -1,5 +1,5 @@
 class_name Droplet
-extends Node2D
+extends RigidBody2D
 
 @export var droplet_size = 1
 @export var size_scaling = 0.5
@@ -10,6 +10,7 @@ var timer : float = 0.1
 func _ready() -> void:
 	grow(0)
 	
+
 func _process(delta: float) -> void:
 	if timer > 0:
 		timer -= delta
