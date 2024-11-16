@@ -32,6 +32,7 @@ func shrink(drops : int) -> void:
 		self.scale.x = droplet_size * size_scaling
 		self.scale.y = droplet_size * size_scaling
 
+
 func _on_area2D_body_entered(body: Node2D) -> void:
 	if timer > 0:
 		return
