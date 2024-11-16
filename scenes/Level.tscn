@@ -13,5 +13,3 @@ tile_set = ExtResource("1_wbtcm")
 
 [node name="Player" parent="." instance=ExtResource("2_fx653")]
 position = Vector2(-1646, -17)
-
-[node name="Camera2D" type="Camera2D" parent="Player"]

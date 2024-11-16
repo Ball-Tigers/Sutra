@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://bswjhob4q6f0i"]
+
+[ext_resource type="Texture2D" uid="uid://bouyk7fl4fnsj" path="res://assets/sprites/waterDropletPlaceHolder.png" id="1_mxoxt"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_8wfi1"]
+radius = 20.0
+
+[node name="Area2D" type="Area2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_8wfi1")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(2.86102e-06, 0)
+scale = Vector2(0.0565684, 0.0477624)
+texture = ExtResource("1_mxoxt")

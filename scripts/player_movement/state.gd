@@ -11,7 +11,8 @@ extends Node
 @export var walk_dec = 0.2
 
 # Player sizing
-
+@export var player_size = 1
+const max_player_size = 5
 
 var gravity: int = ProjectSettings.get_setting("physics/2d/default_gravity")
 
@@ -40,6 +41,11 @@ func flip_right(node: Node2D) -> void:
 func flip_left(node: Node2D) -> void:
 	node.scale.y = -1
 	node.rotation_degrees = 180
+	
+func grow() -> void:
+	if player_size < max_player_size:
+		player_size += 1
+	parent.scale = player_size
 	
 func facing_right(node: Node2D) -> bool:
 	return node.scale.y == 1 and node.rotation_degrees == 0
