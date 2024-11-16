@@ -1,4 +1,4 @@
-[gd_scene load_steps=63 format=3 uid="uid://pnldkxgdpxnl"]
+[gd_scene load_steps=63 format=3 uid="uid://bakg11xxg85vs"]
 
 [ext_resource type="Texture2D" uid="uid://brjkp83hxfmw3" path="res://assets/sprites/water.png" id="1_dqkmd"]
 [ext_resource type="Script" path="res://scripts/player_movement/player.gd" id="1_hl5j7"]
@@ -422,10 +422,11 @@ walk_state = NodePath("../Walk")
 duplicate_state = NodePath("../Duplicate")
 animation_name = "idle"
 
-[node name="Fall" type="Node" parent="StateMachine" node_paths=PackedStringArray("idle_state", "walk_state")]
+[node name="Fall" type="Node" parent="StateMachine" node_paths=PackedStringArray("idle_state", "walk_state", "duplicate_state")]
 script = ExtResource("4_1nxp3")
 idle_state = NodePath("../Idle")
 walk_state = NodePath("../Walk")
+duplicate_state = NodePath("../Duplicate")
 animation_name = "fall"
 
 [node name="Walk" type="Node" parent="StateMachine" node_paths=PackedStringArray("fall_state", "idle_state", "jump_state", "duplicate_state")]
