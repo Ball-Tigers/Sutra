@@ -1,4 +1,4 @@
-[gd_scene load_steps=62 format=3 uid="uid://bakg11xxg85vs"]
+[gd_scene load_steps=63 format=3 uid="uid://bakg11xxg85vs"]
 
 [ext_resource type="Texture2D" uid="uid://brjkp83hxfmw3" path="res://assets/sprites/water.png" id="1_dqkmd"]
 [ext_resource type="Script" path="res://scripts/player_movement/player.gd" id="1_hl5j7"]
@@ -9,6 +9,7 @@
 [ext_resource type="Script" path="res://scripts/player_movement/walk.gd" id="5_filj6"]
 [ext_resource type="Script" path="res://scripts/player_movement/jump.gd" id="6_hlxcl"]
 [ext_resource type="Script" path="res://scripts/player_movement/duplicate.gd" id="7_jtmji"]
+[ext_resource type="PackedScene" uid="uid://kgv1165dowvu" path="res://scenes/Crosshair.tscn" id="10_apboq"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_kihbc"]
 atlas = ExtResource("2_286wt")
@@ -448,3 +449,5 @@ position = Vector2(-1, 0)
 zoom = Vector2(2.5, 2.5)
 process_callback = 0
 position_smoothing_enabled = true
+
+[node name="Crosshair" parent="." instance=ExtResource("10_apboq")]
