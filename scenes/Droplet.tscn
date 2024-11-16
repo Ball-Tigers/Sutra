@@ -151,6 +151,7 @@ size = Vector2(24, 18)
 [node name="Droplet" type="RigidBody2D"]
 collision_layer = 3
 collision_mask = 3
+lock_rotation = true
 contact_monitor = true
 max_contacts_reported = 10
 script = ExtResource("1_mdkds")
