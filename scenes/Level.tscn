@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=4 uid="uid://d3fey34iejnt7"]
+[gd_scene load_steps=4 format=4 uid="uid://dnw2ygia73tmj"]
 
 [ext_resource type="TileSet" uid="uid://8lo8diqxm7c0" path="res://assets/tilesets/current_tile_set.tres" id="1_wbtcm"]
 [ext_resource type="PackedScene" uid="uid://pnldkxgdpxnl" path="res://scenes/Player.tscn" id="2_fx653"]
+[ext_resource type="PackedScene" uid="uid://cmtj2n816rdmf" path="res://scenes/Pebble.tscn" id="3_r6uok"]
 
 [node name="2dNode" type="Node2D"]
 
@@ -13,3 +14,6 @@ tile_set = ExtResource("1_wbtcm")
 
 [node name="Player" parent="." instance=ExtResource("2_fx653")]
 position = Vector2(-1646, -17)
+
+[node name="Pebble" parent="." instance=ExtResource("3_r6uok")]
+position = Vector2(-1555, -21)
