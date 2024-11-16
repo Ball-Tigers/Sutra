@@ -17,3 +17,12 @@ position = Vector2(-1603, -31)
 
 [node name="Area2D" parent="." instance=ExtResource("3_5k28y")]
 position = Vector2(-1290, -13)
+
+[node name="Area2D2" parent="." instance=ExtResource("3_5k28y")]
+position = Vector2(-1311, -7)
+
+[node name="Area2D3" parent="." instance=ExtResource("3_5k28y")]
+position = Vector2(-1258, -7)
+
+[node name="Area2D4" parent="." instance=ExtResource("3_5k28y")]
+position = Vector2(-1238, -13)
