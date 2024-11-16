@@ -8,6 +8,8 @@ extends CharacterBody2D
 @export var size_scaling = 0.5
 @export var max_player_size = 5
 
+@export var default_projectile_force = 150
+
 func _ready() -> void:
 	state_machine.init(self)
 
@@ -22,16 +24,20 @@ func _process(delta: float) -> void:
 	
 func grow() -> void:
 	if player_size < max_player_size:
-		player_size += size_scaling
-	self.scale.x = player_size
-	self.scale.y = player_size
+		player_size += 1
+		self.scale.x = player_size - size_scaling
+		self.scale.y = player_size - size_scaling
 	
 func shrink() -> void:
-	if player_size > size_scaling:
-		player_size -= size_scaling
-	self.scale.x = player_size
-	self.scale.y = player_size
+	if player_size > 1:
+		player_size -= 1
+		self.scale.x = player_size - size_scaling
+		self.scale.y = player_size - size_scaling
 
+func total_shrink() -> void:
+	player_size = 1
+	self.scale.x = 1
+	self.scale.y = 1
 
 func _on_layer_2_collision_body_entered(body: Node2D) -> void:
 	if body.is_in_group("Pushables"):

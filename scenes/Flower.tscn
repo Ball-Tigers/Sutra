@@ -1,10 +1,8 @@
-[gd_scene load_steps=13 format=3 uid="uid://gpsobeju6uer"]
+[gd_scene load_steps=14 format=3 uid="uid://dfw03urteesl8"]
 
 [ext_resource type="Texture2D" uid="uid://2nvykglkcr2b" path="res://assets/world/flower.png" id="1_d2jve"]
-[ext_resource type="PackedScene" path="res://scenes/WaterNeeded.tscn" id="2_byn6a"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_jl3gw"]
-size = Vector2(20, 12)
+[ext_resource type="Script" path="res://assets/sprites/flower.gd" id="1_ehpm5"]
+[ext_resource type="PackedScene" uid="uid://d3cfdfyv55d2b" path="res://scenes/WaterNeeded.tscn" id="2_byn6a"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_nsecj"]
 atlas = ExtResource("1_d2jve")
@@ -75,17 +73,23 @@ animations = [{
 "speed": 3.0
 }]
 
-[node name="Area2D" type="Area2D"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qba1l"]
+size = Vector2(20, 12)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, 4)
-shape = SubResource("RectangleShape2D_jl3gw")
+[node name="Flower" type="Node2D"]
+script = ExtResource("1_ehpm5")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(0, -6)
 sprite_frames = SubResource("SpriteFrames_8n3kk")
 animation = &"idle"
 autoplay = "idle"
-frame_progress = 0.103266
+frame_progress = 0.487473
 
 [node name="WaterNeeded" parent="." instance=ExtResource("2_byn6a")]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(0, 4)
+shape = SubResource("RectangleShape2D_qba1l")

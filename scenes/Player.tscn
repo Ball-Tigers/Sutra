@@ -422,11 +422,10 @@ walk_state = NodePath("../Walk")
 duplicate_state = NodePath("../Duplicate")
 animation_name = "idle"
 
-[node name="Fall" type="Node" parent="StateMachine" node_paths=PackedStringArray("idle_state", "walk_state", "duplicate_state")]
+[node name="Fall" type="Node" parent="StateMachine" node_paths=PackedStringArray("idle_state", "walk_state")]
 script = ExtResource("4_1nxp3")
 idle_state = NodePath("../Idle")
 walk_state = NodePath("../Walk")
-duplicate_state = NodePath("../Duplicate")
 animation_name = "fall"
 
 [node name="Walk" type="Node" parent="StateMachine" node_paths=PackedStringArray("fall_state", "idle_state", "jump_state", "duplicate_state")]

@@ -1,8 +1,8 @@
-[gd_scene load_steps=4 format=4 uid="uid://ck156wxjt0bds"]
+[gd_scene load_steps=4 format=4 uid="uid://8rp27loml1hd"]
 
 [ext_resource type="TileSet" uid="uid://8lo8diqxm7c0" path="res://assets/tilesets/current_tile_set.tres" id="1_wbtcm"]
-[ext_resource type="PackedScene" uid="uid://bakg11xxg85vs" path="res://scenes/Player.tscn" id="2_fx653"]
-[ext_resource type="PackedScene" path="res://scenes/Pebble.tscn" id="3_r6uok"]
+[ext_resource type="PackedScene" uid="uid://pnldkxgdpxnl" path="res://scenes/Player.tscn" id="2_fx653"]
+[ext_resource type="PackedScene" uid="uid://cmtj2n816rdmf" path="res://scenes/Pebble.tscn" id="3_r6uok"]
 
 [node name="2dNode" type="Node2D"]
 
