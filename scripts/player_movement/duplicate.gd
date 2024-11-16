@@ -10,10 +10,7 @@ func enter() -> void:
 	var mouse_pos = parent.get_local_mouse_position()
 	var angle = atan2(mouse_pos.y, mouse_pos.x)
 	
-	#print(mouse_pos)
-	#print(Input.is_action_just_released("eject"))
-	#print(Input.is_action_just_released("shoot"))
-	print(parent.player_size)
+
 	if Input.is_action_just_pressed("eject"):
 		# create large droplet of size 1
 		# speedify droplet

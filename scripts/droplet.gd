@@ -5,7 +5,7 @@ extends Node2D
 @export var size_scaling = 0.5
 @export var max_size = 5
 
-var timer : float = 2 
+var timer : float = 0.5
 
 func _ready() -> void:
 	grow(0)
