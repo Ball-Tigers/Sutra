@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=4 uid="uid://d3fey34iejnt7"]
+
+[ext_resource type="TileSet" uid="uid://8lo8diqxm7c0" path="res://assets/tilesets/current_tile_set.tres" id="1_wbtcm"]
+
+[node name="Level" type="Node2D"]
+
+[node name="TileMapLayer" type="TileMapLayer" parent="."]
+texture_filter = 1
+tile_map_data = PackedByteArray("AAD+/wAAAQAAAAIAAAD//wAAAQABAAIAAAD/////AQABAAAAAAD+////AQAAAAAAAAD7////AQABAAQAAAD7/wAAAQABAAYAAAD8/wAAAQACAAYAAAD8////AQACAAQAAAAAAP//AQACAAAAAAAAAAAAAQACAAIAAAD6////AQAAAAQAAAD6/wAAAQAAAAYAAAD6//7/AQAIAAAAAAD7//7/AQAKAAcAAAD8//7/AQAIAAAAAAD2////AQAEAAQAAAD3////AQAFAAQAAAD4////AQAGAAQAAAD4/wAAAQAHAAQAAAD2/wAAAQAHAAQAAAD7//3/AQAKAAUAAAD6//3/AQALAAYAAAD7//z/AQAKAAYAAAD8//z/AQAJAAQAAAD7//v/AQAKAAMAAAD9//z/AQAMAAYAAAD5//3/AQAIAAUAAAD7//r/AQAKAAQAAAD7//n/AQAKAAIAAAD6//r/AQAIAAUAAAD8//r/AQAMAAYAAAA=")
+tile_set = ExtResource("1_wbtcm")

@@ -11,10 +11,9 @@ config_version=5
 [application]
 
 config/name="Sutra"
-run/main_scene="res://scenes/Game.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
 config/icon="res://icon.svg"
 
-[rendering]
+[dotnet]
 
-textures/canvas_textures/default_texture_filter=0
+project/assembly_name="Sutra"
