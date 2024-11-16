@@ -5,24 +5,31 @@ extends Node2D
 @export var size_scaling = 0.5
 @export var max_size = 5
 
+var timer : float = 2 
+
 func _ready() -> void:
 	grow(0)
+	
+func _process(delta: float) -> void:
+	if timer > 0:
+		timer -= delta
 
 func grow(drops : int) -> void:
 	if size < max_size:
 		size += drops
-	self.scale.x = size * size_scaling
-	self.scale.y = size * size_scaling
+		self.scale.x = size * size_scaling
+		self.scale.y = size * size_scaling
 	print(size)
 
 func shrink(drops : int) -> void:
 	if size < max_size:
 		size -= drops
-	self.scale.x = size * size_scaling
-	self.scale.y = size * size_scaling
+		self.scale.x = size * size_scaling
+		self.scale.y = size * size_scaling
 
 func _on_area2D_body_entered(body: Node2D) -> void:
-	#print(body)
+	if timer > 0:
+		return
 	var player := body as Player
 	if player:
 		for i in size:

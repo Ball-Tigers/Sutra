@@ -1,9 +1,9 @@
-[gd_scene load_steps=5 format=4 uid="uid://dpkt75e1hprem"]
+[gd_scene load_steps=5 format=4 uid="uid://cxfd4yrg0dmrs"]
 
 [ext_resource type="TileSet" uid="uid://8lo8diqxm7c0" path="res://assets/tilesets/current_tile_set.tres" id="1_1otm7"]
-[ext_resource type="PackedScene" uid="uid://bakg11xxg85vs" path="res://scenes/Player.tscn" id="2_1ac02"]
-[ext_resource type="PackedScene" path="res://scenes/Droplet.tscn" id="3_5k28y"]
-[ext_resource type="PackedScene" path="res://scenes/Pebble.tscn" id="4_t2nkt"]
+[ext_resource type="PackedScene" uid="uid://pnldkxgdpxnl" path="res://scenes/Player.tscn" id="2_1ac02"]
+[ext_resource type="PackedScene" uid="uid://gfjjebi8mj0e" path="res://scenes/Droplet.tscn" id="3_5k28y"]
+[ext_resource type="PackedScene" uid="uid://cmtj2n816rdmf" path="res://scenes/Pebble.tscn" id="4_t2nkt"]
 
 [node name="TutLevel" type="Node2D"]
 
