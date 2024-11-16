@@ -12,6 +12,7 @@ extends CharacterBody2D
 
 func _ready() -> void:
 	state_machine.init(self)
+	total_shrink()
 
 func _unhandled_input(event: InputEvent) -> void:
 	state_machine.process_input(event)
@@ -36,8 +37,8 @@ func shrink() -> void:
 
 func total_shrink() -> void:
 	player_size = 1
-	self.scale.x = 1
-	self.scale.y = 1
+	self.scale.x = player_size * size_scaling
+	self.scale.y = player_size * size_scaling
 
 func _on_layer_2_collision_body_entered(body: Node2D) -> void:
 	if body.is_in_group("Pushables"):
