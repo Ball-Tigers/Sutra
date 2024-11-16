@@ -1,4 +1,4 @@
-[gd_scene load_steps=3 format=4 uid="uid://bsod1fgo6oxc7"]
+[gd_scene load_steps=3 format=4 uid="uid://hpdna3l64ldm"]
 
 [ext_resource type="TileSet" uid="uid://8lo8diqxm7c0" path="res://assets/tilesets/current_tile_set.tres" id="1_fwe8o"]
 [ext_resource type="PackedScene" uid="uid://bakg11xxg85vs" path="res://scenes/Player.tscn" id="2_nok48"]
@@ -13,6 +13,3 @@ tile_set = ExtResource("1_fwe8o")
 
 [node name="Player" parent="." instance=ExtResource("2_nok48")]
 position = Vector2(-1603, -31)
-
-[node name="Camera2D" type="Camera2D" parent="Player"]
-position = Vector2(-4, 5)

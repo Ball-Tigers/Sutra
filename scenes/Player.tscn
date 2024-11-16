@@ -112,3 +112,9 @@ animation_name = "default"
 script = ExtResource("7_jtmji")
 fall_state = NodePath("../Fall")
 animation_name = "default"
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(0, -4)
+zoom = Vector2(2.5, 2.5)
+process_callback = 0
+position_smoothing_enabled = true
