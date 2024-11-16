@@ -2,6 +2,7 @@ extends State
 
 @export var idle_state: State
 @export var walk_state: State
+@export var duplicate_state: State
 
 func enter() -> void:
 	super()
@@ -14,7 +15,9 @@ func process_frame(_delta: float) -> State:
 	return null
 
 func process_input(_event: InputEvent) -> State:
-	return null
+	if Input.is_action_just_pressed("eject") or Input.is_action_just_pressed("shoot"):
+		return duplicate_state
+	return null;
 	
 func process_physics(delta: float) -> State:
 	parent.velocity.y += gravity * delta

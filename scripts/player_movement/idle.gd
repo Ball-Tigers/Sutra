@@ -19,6 +19,8 @@ func process_input(_event: InputEvent) -> State:
 		return jump_state
 	elif Input.is_action_just_pressed('left') or Input.is_action_just_pressed('right'):
 		return walk_state
+	elif Input.is_action_just_pressed("eject") or Input.is_action_just_pressed("shoot"):
+		return duplicate_state
 	return null
 	
 func get_state() -> String:

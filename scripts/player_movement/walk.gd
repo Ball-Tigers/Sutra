@@ -20,6 +20,8 @@ func process_frame(_delta: float) -> State:
 func process_input(_event: InputEvent) -> State:
 	if Input.is_action_just_pressed('jump') and parent.is_on_floor():
 		return jump_state
+	elif Input.is_action_just_pressed("eject") or Input.is_action_just_pressed("shoot"):
+		return duplicate_state
 	return null
 
 func process_physics(delta: float) -> State:
