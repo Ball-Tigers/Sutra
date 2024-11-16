@@ -27,10 +27,10 @@ func process_physics(delta: float) -> State:
 	
 	if Input.is_action_pressed("right"):
 		parent.velocity.x = move_toward(parent.velocity.x, walk_speed, walk_acc)
-		flip_right(parent)
+		parent.animations.flip_h = false
 	elif Input.is_action_pressed("left"):
 		parent.velocity.x = move_toward(parent.velocity.x, -walk_speed, walk_acc)
-		flip_left(parent)
+		parent.animations.flip_h = true
 	else:
 		if parent.velocity.x == 0: 
 			return idle_state

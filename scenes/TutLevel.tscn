@@ -2,7 +2,7 @@
 
 [ext_resource type="TileSet" uid="uid://8lo8diqxm7c0" path="res://assets/tilesets/current_tile_set.tres" id="1_fwe8o"]
 [ext_resource type="PackedScene" uid="uid://bakg11xxg85vs" path="res://scenes/Player.tscn" id="2_nok48"]
-[ext_resource type="PackedScene" uid="uid://bswjhob4q6f0i" path="res://scenes/DropletPlaceHolder.tscn" id="3_c4wv1"]
+[ext_resource type="PackedScene" uid="uid://bswjhob4q6f0i" path="res://scenes/Droplet.tscn" id="3_c4wv1"]
 
 [node name="TutLevel" type="Node2D"]
 

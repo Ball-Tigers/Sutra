@@ -34,21 +34,3 @@ func process_frame(_delta: float) -> State:
 func process_physics(_delta: float) -> State:
 	return null
 	
-func flip_right(node: Node2D) -> void:
-	node.scale.y = 1
-	node.rotation_degrees = 0
-	
-func flip_left(node: Node2D) -> void:
-	node.scale.y = -1
-	node.rotation_degrees = 180
-	
-func grow() -> void:
-	if player_size < max_player_size:
-		player_size += 1
-	parent.scale = player_size
-	
-func facing_right(node: Node2D) -> bool:
-	return node.scale.y == 1 and node.rotation_degrees == 0
-	
-func facing_left(node: Node2D) -> bool:
-	return node.scale.y == -1 and abs(node.rotation_degrees) == 180

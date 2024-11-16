@@ -21,10 +21,10 @@ func process_physics(delta: float) -> State:
 	
 	if Input.is_action_pressed("right"):
 		parent.velocity.x = min(parent.velocity.x + walk_acc, walk_speed)
-		flip_right(parent)
+		parent.animations.flip_h = false
 	elif Input.is_action_pressed("left"):
 		parent.velocity.x = max(parent.velocity.x - walk_acc, -walk_speed)
-		flip_left(parent)
+		parent.animations.flip_h = true
 		
 	parent.move_and_slide()
 	return null

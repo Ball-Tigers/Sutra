@@ -1,16 +1,21 @@
-[gd_scene load_steps=3 format=3 uid="uid://bswjhob4q6f0i"]
+[gd_scene load_steps=4 format=3 uid="uid://bswjhob4q6f0i"]
 
-[ext_resource type="Texture2D" uid="uid://bouyk7fl4fnsj" path="res://assets/sprites/waterDropletPlaceHolder.png" id="1_mxoxt"]
+[ext_resource type="Script" path="res://scenes/droplet.gd" id="1_mdkds"]
+[ext_resource type="Texture2D" uid="uid://bclplhrroj0nb" path="res://icon.svg" id="1_p6wju"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_8wfi1"]
-radius = 20.0
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_b7qrf"]
+size = Vector2(6, 6)
 
 [node name="Area2D" type="Area2D"]
+script = ExtResource("1_mdkds")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("CircleShape2D_8wfi1")
+position = Vector2(0, -1)
+shape = SubResource("RectangleShape2D_b7qrf")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(2.86102e-06, 0)
-scale = Vector2(0.0565684, 0.0477624)
-texture = ExtResource("1_mxoxt")
+position = Vector2(2.86102e-06, -0.471603)
+scale = Vector2(0.0565684, 0.0551312)
+texture = ExtResource("1_p6wju")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
