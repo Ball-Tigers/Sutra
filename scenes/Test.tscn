@@ -1,0 +1,28 @@
+[gd_scene load_steps=5 format=4 uid="uid://dv42cbm16aof1"]
+
+[ext_resource type="TileSet" uid="uid://8lo8diqxm7c0" path="res://assets/tilesets/current_tile_set.tres" id="1_nlra5"]
+[ext_resource type="PackedScene" uid="uid://pnldkxgdpxnl" path="res://scenes/Player.tscn" id="1_va60e"]
+[ext_resource type="PackedScene" uid="uid://cmtj2n816rdmf" path="res://scenes/Pebble.tscn" id="2_g2rqu"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g17tn"]
+size = Vector2(335, 20)
+
+[node name="Test" type="Node2D"]
+
+[node name="TileMapLayer" type="TileMapLayer" parent="."]
+tile_map_data = PackedByteArray("AAD4/wEAAQAAAAcAAAD5/wEAAQABAAcAAAD6/wEAAQABAAcAAAD7/wEAAQABAAcAAAD8/wEAAQABAAcAAAD9/wEAAQABAAcAAAD+/wEAAQABAAcAAAD//wEAAQABAAcAAAAAAAEAAQABAAcAAAABAAEAAQABAAcAAAACAAEAAQABAAcAAAADAAEAAQABAAcAAAAEAAEAAQABAAcAAAAFAAEAAQABAAcAAAAGAAEAAQABAAcAAAAHAAEAAQACAAcAAAA=")
+tile_set = ExtResource("1_nlra5")
+
+[node name="Player" parent="." instance=ExtResource("1_va60e")]
+collision_layer = 3
+
+[node name="Pebble" parent="." instance=ExtResource("2_g2rqu")]
+position = Vector2(54, -2)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+collision_layer = 3
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-8, 29)
+shape = SubResource("RectangleShape2D_g17tn")
