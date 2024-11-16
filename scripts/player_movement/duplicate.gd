@@ -16,22 +16,24 @@ func enter() -> void:
 		
 #		set parent velocity
 		set_velocity(parent)
+		parent.total_shrink()
 		
 #		create new blob
 		var blob = newDroplet.instantiate()
 		blob.set_size(parent.player_size - 1)
 		blob.position = parent.position
 		add_sibling(blob)
-		parent.total_shrink()
 			
 	elif Input.is_action_just_pressed("shoot"):
 #		Set character to size - 1, shoot blob of size 1
 		print(parent.player_size)
 		parent.shrink()
-
-	
-	# add velocity in direction towards mouse cursor
-	# change to fall_state
+		
+		var blob = newDroplet.instantiate()
+		blob.set_size(1)
+		blob.position = parent.position
+		set_velocity(blob)
+		add_sibling(blob)
 		
 func set_velocity(node: Node2D) -> void:
 	var player := node as Player
