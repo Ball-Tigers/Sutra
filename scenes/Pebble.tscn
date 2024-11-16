@@ -1,0 +1,30 @@
+[gd_scene load_steps=5 format=3 uid="uid://cmtj2n816rdmf"]
+
+[ext_resource type="Script" path="res://scripts/pushable.gd" id="1_3fke3"]
+[ext_resource type="Texture2D" uid="uid://bvtooccgp46uw" path="res://assets/sprites/pebble.png" id="2_3gogt"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_11g72"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lvka2"]
+size = Vector2(26, 26)
+
+[node name="Pebble" type="Node2D"]
+
+[node name="RigidBody2D" type="RigidBody2D" parent="."]
+script = ExtResource("1_3fke3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D"]
+shape = SubResource("RectangleShape2D_11g72")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_lvka2")
+disabled = true
+
+[node name="Pebble" type="Sprite2D" parent="."]
+position = Vector2(0, -1)
+scale = Vector2(0.54375, 0.54375)
+texture = ExtResource("2_3gogt")
+
+[connection signal="body_entered" from="Area2D" to="RigidBody2D" method="_on_area_2d_body_entered"]
