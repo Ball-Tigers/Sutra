@@ -7,29 +7,25 @@ extends State
 func enter() -> void:
 	super()
 	
-	var mouse_pos = parent.get_local_mouse_position()
-	var angle = atan2(mouse_pos.y, mouse_pos.x)
-	
+#	guard clause
+	if parent.player_size <= 1 :
+		return
 
 	if Input.is_action_just_pressed("eject"):
-		# create large droplet of size 1
-		# speedify droplet
-		# set_velocity(cum)
-		if parent.player_size > 1 :
-			print(parent.player_size)
-			parent.projectile_force = (parent.player_size * 400) - 400
-			set_velocity(parent)
-			var droppy_boy = newDroplet.instantiate()
-			droppy_boy.position = parent.position
-			add_sibling(droppy_boy)
-			parent.total_shrink()
+#		Set character to 1, leave blob of size - 1
 		
+#		set parent velocity
+		set_velocity(parent)
 		
-		
-		
-		
+#		create new blob
+		var blob = newDroplet.instantiate()
+		blob.set_size(parent.player_size - 1)
+		blob.position = parent.position
+		add_sibling(blob)
+		parent.total_shrink()
+			
 	elif Input.is_action_just_pressed("shoot"):
-		# create large droplet of size parent.player_size - 1
+#		Set character to size - 1, shoot blob of size 1
 		print(parent.player_size)
 		parent.shrink()
 
@@ -44,11 +40,14 @@ func set_velocity(node: Node2D) -> void:
 	
 	var mouse_pos = parent.get_global_mouse_position()
 	var vector_pos = (mouse_pos - player.position).normalized()
+	var projectile_force = parent.player_size * parent.default_projectile_force
+
+	
 	print("Mouse pos", mouse_pos)
 	print("Player pos", player.position)
 	var angle = atan2(vector_pos.x, vector_pos.y)
-	node.velocity.x = parent.projectile_force * vector_pos.x
-	node.velocity.y = parent.projectile_force * vector_pos.y
+	node.velocity.x = projectile_force * vector_pos.x
+	node.velocity.y = projectile_force * vector_pos.y
 	
 func process_frame(_delta: float) -> State:
 	return fall_state

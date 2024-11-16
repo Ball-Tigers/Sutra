@@ -8,7 +8,7 @@ extends CharacterBody2D
 @export var size_scaling = 0.5
 @export var max_player_size = 5
 
-@export var projectile_force = 300
+@export var default_projectile_force = 150
 
 func _ready() -> void:
 	state_machine.init(self)
