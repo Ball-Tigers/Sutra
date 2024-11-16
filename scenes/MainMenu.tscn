@@ -1,13 +1,25 @@
 [gd_scene load_steps=2 format=3 uid="uid://e0php0fpor4v"]
 
-[ext_resource type="Script" path="res://scenes/main_menu.gd" id="1_tpcq0"]
+[ext_resource type="Script" path="res://scripts/main_menu.gd" id="1_docpn"]
 
-[node name="MainMenu" type="Node2D"]
-script = ExtResource("1_tpcq0")
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_docpn")
 
 [node name="ColorRect" type="ColorRect" parent="."]
-offset_left = -706.0
-offset_top = -367.0
-offset_right = 1880.0
-offset_bottom = 906.0
-color = Color(0, 0, 0, 1)
+layout_mode = 0
+offset_right = 1151.0
+offset_bottom = 641.0
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 366.0
+offset_top = 245.0
+offset_right = 824.0
+offset_bottom = 333.0
+text = "PLAY"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

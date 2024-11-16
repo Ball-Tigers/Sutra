@@ -1,8 +1,8 @@
-[gd_scene load_steps=5 format=4 uid="uid://bsod1fgo6oxc7"]
+[gd_scene load_steps=5 format=4 uid="uid://cxfd4yrg0dmrs"]
 
 [ext_resource type="TileSet" uid="uid://8lo8diqxm7c0" path="res://assets/tilesets/current_tile_set.tres" id="1_1otm7"]
 [ext_resource type="PackedScene" uid="uid://pnldkxgdpxnl" path="res://scenes/Player.tscn" id="2_1ac02"]
-[ext_resource type="PackedScene" uid="uid://bswjhob4q6f0i" path="res://scenes/Droplet.tscn" id="3_5k28y"]
+[ext_resource type="PackedScene" uid="uid://gfjjebi8mj0e" path="res://scenes/Droplet.tscn" id="3_5k28y"]
 [ext_resource type="PackedScene" uid="uid://cmtj2n816rdmf" path="res://scenes/Pebble.tscn" id="4_t2nkt"]
 
 [node name="TutLevel" type="Node2D"]
@@ -18,12 +18,15 @@ position = Vector2(-1603, -31)
 
 [node name="Area2D2" parent="." instance=ExtResource("3_5k28y")]
 position = Vector2(-1311, -7)
+lock_rotation = false
 
 [node name="Area2D3" parent="." instance=ExtResource("3_5k28y")]
 position = Vector2(-1258, -7)
+lock_rotation = false
 
 [node name="Area2D4" parent="." instance=ExtResource("3_5k28y")]
 position = Vector2(-1238, -13)
+lock_rotation = false
 
 [node name="Pebble" parent="." groups=["Pushables"] instance=ExtResource("4_t2nkt")]
 position = Vector2(-1525, -10)
