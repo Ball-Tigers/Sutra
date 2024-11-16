@@ -7,7 +7,7 @@ extends State
 func enter() -> void:
 	super()
 	
-	var mouse_pos = parent.get_local_mouse_position()
+	var mouse_pos = parent.get_local_mouse_position() 
 	var angle = atan2(mouse_pos.y, mouse_pos.x)
 	
 
@@ -44,8 +44,8 @@ func set_velocity(node: Node2D) -> void:
 	
 	var mouse_pos = parent.get_global_mouse_position()
 	var vector_pos = (mouse_pos - player.position).normalized()
-	print("Mouse pos", mouse_pos)
-	print("Player pos", player.position)
+	print("Mouse pos ", mouse_pos)
+	print("Player pos ", player.position)
 	var angle = atan2(vector_pos.x, vector_pos.y)
 	node.velocity.x = parent.projectile_force * vector_pos.x
 	node.velocity.y = parent.projectile_force * vector_pos.y
