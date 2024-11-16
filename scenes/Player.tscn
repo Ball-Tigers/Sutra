@@ -463,4 +463,3 @@ shape = SubResource("RectangleShape2D_hifje")
 
 [connection signal="body_entered" from="Layer 2 Collision" to="." method="_on_layer_2_collision_body_entered"]
 [connection signal="body_exited" from="Layer 2 Collision" to="." method="_on_layer_2_collision_body_exited"]
-[node name="Crosshair" parent="." instance=ExtResource("10_apboq")]
