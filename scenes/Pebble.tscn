@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://bta6tetx7ii12"]
+[gd_scene load_steps=5 format=3 uid="uid://cmtj2n816rdmf"]
 
 [ext_resource type="Script" path="res://scripts/pushable.gd" id="1_3fke3"]
 [ext_resource type="Texture2D" uid="uid://bjklufajn7u0u" path="res://assets/sprites/pebble.png" id="2_3gogt"]
@@ -10,9 +10,11 @@ size = Vector2(26, 26)
 
 [node name="Pebble" type="Node2D"]
 
-[node name="RigidBody2D" type="RigidBody2D" parent="."]
+[node name="RigidBody2D" type="RigidBody2D" parent="." groups=["Pushables"]]
 collision_layer = 2
 collision_mask = 2
+mass = 50.0
+gravity_scale = 2.0
 script = ExtResource("1_3fke3")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D"]
@@ -21,6 +23,7 @@ shape = SubResource("RectangleShape2D_11g72")
 [node name="Pebble" type="Sprite2D" parent="RigidBody2D"]
 position = Vector2(0, -1)
 scale = Vector2(0.54375, 0.54375)
+texture = ExtResource("2_3gogt")
 
 [node name="Area2D" type="Area2D" parent="RigidBody2D"]
 
@@ -28,12 +31,6 @@ scale = Vector2(0.54375, 0.54375)
 shape = SubResource("RectangleShape2D_lvka2")
 disabled = true
 
-[node name="Pebble" type="Sprite2D" parent="."]
-position = Vector2(0, -1)
-scale = Vector2(0.54375, 0.54375)
-
-[node name="Area2D" type="Area2D" parent="RigidBody2D"]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D/Area2D"]
-shape = SubResource("RectangleShape2D_lvka2")
-disabled = true
+[connection signal="body_entered" from="RigidBody2D" to="RigidBody2D" method="_on_body_entered"]
+[connection signal="body_shape_entered" from="RigidBody2D" to="RigidBody2D" method="_on_body_shape_entered"]
+[connection signal="body_entered" from="RigidBody2D/Area2D" to="RigidBody2D" method="_on_area_2d_body_entered"]

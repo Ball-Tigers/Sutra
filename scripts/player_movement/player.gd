@@ -31,3 +31,15 @@ func shrink() -> void:
 		player_size -= size_scaling
 	self.scale.x = player_size
 	self.scale.y = player_size
+
+
+func _on_layer_2_collision_body_entered(body: Node2D) -> void:
+	if body.is_in_group("Pushables"):
+		body.collision_layer = 1
+		body.collision_mask = 1
+
+
+func _on_layer_2_collision_body_exited(body: Node2D) -> void:
+	if body.is_in_group("Pushables"):
+		body.collision_layer = 2
+		body.collision_mask = 2

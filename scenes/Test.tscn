@@ -14,6 +14,7 @@ tile_map_data = PackedByteArray("AAD4/wEAAQAAAAcAAAD5/wEAAQABAAcAAAD6/wEAAQABAAc
 tile_set = ExtResource("1_nlra5")
 
 [node name="Player" parent="." instance=ExtResource("1_va60e")]
+position = Vector2(1, -1)
 collision_layer = 3
 
 [node name="Pebble" parent="." instance=ExtResource("2_g2rqu")]
