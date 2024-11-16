@@ -1,21 +1,86 @@
-[gd_scene load_steps=4 format=3 uid="uid://bswjhob4q6f0i"]
+[gd_scene load_steps=12 format=3 uid="uid://gfjjebi8mj0e"]
 
 [ext_resource type="Script" path="res://scripts/droplet.gd" id="1_mdkds"]
-[ext_resource type="Texture2D" uid="uid://bclplhrroj0nb" path="res://icon.svg" id="1_p6wju"]
+[ext_resource type="Texture2D" uid="uid://brjkp83hxfmw3" path="res://assets/sprites/water.png" id="1_yyr8i"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_b7qrf"]
-size = Vector2(6, 6)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3u3im"]
+size = Vector2(20, 13)
 
-[node name="Area2D" type="Area2D"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_6e3hw"]
+atlas = ExtResource("1_yyr8i")
+region = Rect2(0, 50, 50, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s1wmk"]
+atlas = ExtResource("1_yyr8i")
+region = Rect2(50, 50, 50, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3lm44"]
+atlas = ExtResource("1_yyr8i")
+region = Rect2(100, 50, 50, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x3d1g"]
+atlas = ExtResource("1_yyr8i")
+region = Rect2(150, 50, 50, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f8jub"]
+atlas = ExtResource("1_yyr8i")
+region = Rect2(200, 50, 50, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cvve7"]
+atlas = ExtResource("1_yyr8i")
+region = Rect2(250, 50, 50, 50)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_fskrf"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6e3hw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_s1wmk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3lm44")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_x3d1g")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f8jub")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cvve7")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dvqa7"]
+size = Vector2(24, 18)
+
+[node name="Droplet" type="RigidBody2D"]
+collision_layer = 3
+collision_mask = 3
+contact_monitor = true
+max_contacts_reported = 10
 script = ExtResource("1_mdkds")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, -1)
-shape = SubResource("RectangleShape2D_b7qrf")
+position = Vector2(0, 3.5)
+shape = SubResource("RectangleShape2D_3u3im")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(2.86102e-06, -0.471603)
-scale = Vector2(0.0565684, 0.0551312)
-texture = ExtResource("1_p6wju")
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(1, -2.38419e-07)
+scale = Vector2(0.52, 0.42)
+sprite_frames = SubResource("SpriteFrames_fskrf")
+autoplay = "default"
+frame_progress = 0.216848
 
-[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0, 4)
+shape = SubResource("RectangleShape2D_dvqa7")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area2D_body_entered"]
