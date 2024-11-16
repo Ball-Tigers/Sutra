@@ -17,8 +17,8 @@ func _process(delta: float) -> void:
 		
 func set_size(size : int) -> void:
 	droplet_size = size
-	#self.scale.x = size * size_scaling
-	#self.scale.y = size * size_scaling
+	self.scale.x = size * size_scaling
+	self.scale.y = size * size_scaling
 
 func grow(drops : int) -> void:
 	if droplet_size < max_player_size:

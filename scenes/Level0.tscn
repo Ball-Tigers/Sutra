@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://bswjhob4q6f0i" path="res://scenes/Droplet.tscn" id="3_5k28y"]
 [ext_resource type="PackedScene" uid="uid://cmtj2n816rdmf" path="res://scenes/Pebble.tscn" id="4_t2nkt"]
 
-[node name="TutLevel" type="Node2D"]
+[node name="Level0" type="Node2D"]
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
 texture_filter = 1
