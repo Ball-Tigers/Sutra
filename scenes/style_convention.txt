@@ -1,0 +1,7 @@
+Scenes are to be named with Pascal Case:
+(Uppercase first letter, Uppercase first letters in words)
+
+SceneName.scene
+
+
+The parent element is to be a Node2D, unless otherwise required.

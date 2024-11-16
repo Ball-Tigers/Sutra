@@ -1,0 +1,4 @@
+Asset files are to be named with Snake Case:
+(Lowercase all letters, underscores between words)
+
+asset_name.png

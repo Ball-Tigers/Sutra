@@ -1,0 +1,7 @@
+Scripts are to be named with Camel Case:
+(Lowercase first letter, Uppercase first letters in subsequent words)
+
+scriptName.gd
+
+
+We are to use GDScript for this project, as it provides more flexibility with the Godot engine.
