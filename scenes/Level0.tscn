@@ -6,7 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://cmtj2n816rdmf" path="res://scenes/Pebble.tscn" id="4_t2nkt"]
 [ext_resource type="Texture2D" uid="uid://cw08bqx08wv32" path="res://assets/world/backGround.png" id="5_qia0x"]
 
-[node name="TutLevel" type="Node2D"]
+[node name="Level0" type="Node2D"]
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
 texture_filter = 1
