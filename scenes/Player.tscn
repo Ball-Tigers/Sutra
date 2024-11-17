@@ -472,5 +472,9 @@ shape = SubResource("RectangleShape2D_hifje")
 [node name="EjectParticle" parent="." instance=ExtResource("10_bfee7")]
 one_shot = true
 
+[node name="DeathParticle" type="CPUParticles2D" parent="."]
+process_mode = 3
+emitting = false
+
 [connection signal="body_entered" from="Layer 2 Collision" to="." method="_on_layer_2_collision_body_entered"]
 [connection signal="body_exited" from="Layer 2 Collision" to="." method="_on_layer_2_collision_body_exited"]

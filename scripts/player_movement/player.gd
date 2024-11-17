@@ -45,6 +45,8 @@ func _on_layer_2_collision_body_entered(body: Node2D) -> void:
 		body.collision_layer = 1
 		body.collision_mask = 1
 
+func die() -> void:
+	$DeathParticle.emitting = true
 
 func _on_layer_2_collision_body_exited(body: Node2D) -> void:
 	if body.is_in_group("Pushables"):
