@@ -89,7 +89,7 @@ terrain_set_0/terrain_0/name = "Wire"
 terrain_set_0/terrain_0/color = Color(1, 0, 0, 1)
 sources/0 = SubResource("TileSetAtlasSource_1hvu6")
 
-[node name="2dNode" type="Node2D"]
+[node name="Level1" type="Node2D"]
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
 texture_filter = 1
@@ -117,18 +117,19 @@ id = 2
 
 [node name="Flower" parent="." instance=ExtResource("5_rlakn")]
 position = Vector2(-970, -141)
+drops_needed = 5
 
 [node name="Droplet" parent="." instance=ExtResource("6_lf62n")]
-position = Vector2(-1740, -16)
+position = Vector2(-1767, 2)
 
 [node name="Droplet2" parent="." instance=ExtResource("6_lf62n")]
-position = Vector2(-1879, -187)
+position = Vector2(-1875, -177)
 
 [node name="Droplet3" parent="." instance=ExtResource("6_lf62n")]
-position = Vector2(-1835, -189)
+position = Vector2(-1839, -177)
 
 [node name="Droplet4" parent="." instance=ExtResource("6_lf62n")]
-position = Vector2(-1791, -38)
+position = Vector2(-1794, 3)
 
 [node name="Wire3" type="Node2D" parent="."]
 position = Vector2(-1781, -167)
