@@ -10,6 +10,6 @@ func die() -> void:
 func reset() -> void:
 	get_tree().reload_current_scene()
 	
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	if(Input.is_action_just_pressed("Reset")):
 		get_tree().change_scene_to_packed(currLevel)
