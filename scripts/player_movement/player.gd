@@ -11,6 +11,7 @@ extends CharacterBody2D
 @export var default_projectile_force = 150
 
 @onready var water_droplet: AudioStreamPlayer2D = $water_droplet
+@onready var background_music: AudioStreamPlayer2D = $"../AudioStreamPlayer2D"
 
 
 func _ready() -> void:
