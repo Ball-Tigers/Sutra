@@ -8,11 +8,8 @@ extends State
 
 func enter() -> void:
 	super()
-	
-	parent.velocity.y = -jump_speed
 	jump.play()
-
-	
+	parent.velocity.y = -jump_speed
 	
 func process_frame(_delta: float) -> State:
 	if parent.velocity.y > 0.0:
