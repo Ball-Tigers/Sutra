@@ -58,8 +58,6 @@ func set_velocity(node: Node2D) -> void:
 		drop.apply_impulse(vector_pos * projectile_force)
 		return
 	
-	
-	var angle = atan2(vector_pos.x, vector_pos.y)
 	node.velocity.x = projectile_force * vector_pos.x
 	node.velocity.y = projectile_force * vector_pos.y
 	
