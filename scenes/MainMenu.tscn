@@ -1,6 +1,23 @@
-[gd_scene load_steps=2 format=3 uid="uid://e0php0fpor4v"]
+[gd_scene load_steps=7 format=3 uid="uid://e0php0fpor4v"]
 
 [ext_resource type="Script" path="res://scripts/main_menu.gd" id="1_docpn"]
+[ext_resource type="Texture2D" uid="uid://cw08bqx08wv32" path="res://assets/world/backGround.png" id="2_f65ed"]
+
+[sub_resource type="SystemFont" id="SystemFont_b80rj"]
+
+[sub_resource type="Theme" id="Theme_pgunh"]
+default_font = SubResource("SystemFont_b80rj")
+default_font_size = 32
+
+[sub_resource type="SystemFont" id="SystemFont_3l5rk"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_eonbh"]
+font = SubResource("SystemFont_3l5rk")
+font_size = 72
+font_color = Color(0.0745098, 0.729412, 1, 1)
+outline_size = 10
+outline_color = Color(9.77656e-09, 0.0216473, 0.039667, 1)
+shadow_size = 2
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -9,17 +26,48 @@ offset_right = 40.0
 offset_bottom = 40.0
 script = ExtResource("1_docpn")
 
-[node name="ColorRect" type="ColorRect" parent="."]
-layout_mode = 0
-offset_right = 1151.0
-offset_bottom = 641.0
+[node name="BackGround" type="Sprite2D" parent="."]
+position = Vector2(580, 323)
+scale = Vector2(1.20313, 1.18519)
+texture = ExtResource("2_f65ed")
 
-[node name="Button" type="Button" parent="."]
+[node name="Level1_button" type="Button" parent="."]
 layout_mode = 0
-offset_left = 366.0
-offset_top = 245.0
-offset_right = 824.0
-offset_bottom = 333.0
-text = "PLAY"
+offset_left = 225.0
+offset_top = 236.0
+offset_right = 408.0
+offset_bottom = 324.0
+theme = SubResource("Theme_pgunh")
+text = "Level 1"
 
-[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[node name="Level2_button" type="Button" parent="."]
+offset_left = 496.0
+offset_top = 241.0
+offset_right = 679.0
+offset_bottom = 329.0
+theme = SubResource("Theme_pgunh")
+text = "Level 2"
+
+[node name="Level3_button" type="Button" parent="."]
+offset_left = 761.0
+offset_top = 243.0
+offset_right = 944.0
+offset_bottom = 331.0
+theme = SubResource("Theme_pgunh")
+text = "Level 3"
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 406.0
+offset_top = 60.0
+offset_right = 801.0
+offset_bottom = 172.0
+text = "SUTRA"
+label_settings = SubResource("LabelSettings_eonbh")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[connection signal="pressed" from="Level1_button" to="." method="_on_level_1_button_pressed"]
+[connection signal="pressed" from="Level2_button" to="." method="_on_level_2_button_pressed"]
+[connection signal="pressed" from="Level3_button" to="." method="_on_level_3_button_pressed"]
