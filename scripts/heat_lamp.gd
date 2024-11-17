@@ -15,6 +15,5 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 		return
 	
 	if active:
-		print("player died :(")
 		Game.die()
 		

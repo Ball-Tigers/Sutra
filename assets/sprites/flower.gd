@@ -12,8 +12,6 @@ func _process(delta: float) -> void:
 	pass
 
 func on_complete() -> void:
-	print("level complete!")
-	print(get_tree().current_scene.name)
 	var scene = get_tree().current_scene.name
 	
 	get_tree().paused = true
