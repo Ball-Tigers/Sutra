@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://bvsw4s11r4b7x"]
+[gd_scene load_steps=4 format=3 uid="uid://bvsw4s11r4b7x"]
 
 [ext_resource type="PackedScene" uid="uid://bakg11xxg85vs" path="res://scenes/Player.tscn" id="1_h0wq3"]
+[ext_resource type="AudioStream" uid="uid://cdt08vhbsstop" path="res://assets/Music/BackgroundMusic.mp3" id="2_n7jet"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_3c4w5"]
 
@@ -14,3 +15,8 @@ position = Vector2(1, -1)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2(0, 17)
 shape = SubResource("WorldBoundaryShape2D_3c4w5")
+
+[node name="Music" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("2_n7jet")
+volume_db = -6.934
+autoplay = true
