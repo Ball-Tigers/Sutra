@@ -5,7 +5,7 @@ extends Node2D
 @export var id : int
 @onready var sizzle: AudioStreamPlayer2D = $sizzle
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	if not active:
 		$CPUParticles2D.emitting = false
 		$CPUParticles2D2.emitting = false

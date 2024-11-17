@@ -8,10 +8,6 @@ extends Node2D
 func _ready() -> void:
 	$WaterNeeded.drops_needed = drops_needed
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
-
 func on_complete() -> void:
 	victory.play()
 	var scene = get_tree().current_scene.name
