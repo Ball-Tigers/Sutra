@@ -43,6 +43,8 @@ func _on_area2D_body_entered(body: Node2D) -> void:
 	if player:
 		for i in droplet_size:
 			player.grow()
+			if player.is_on_floor():
+				player.position.y -= 1
 			shrink(1)
 		if droplet_size == 0:
 			self.queue_free()
