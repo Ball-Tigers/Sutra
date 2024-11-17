@@ -3,6 +3,7 @@ extends Node2D
 
 @export var active : bool = true
 @export var id : int
+@onready var sizzle: AudioStreamPlayer2D = $sizzle
 
 func _process(delta: float) -> void:
 	if not active:
@@ -15,5 +16,6 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 		return
 	
 	if active:
+		sizzle.play()
 		Game.die()
 		

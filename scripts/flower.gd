@@ -1,6 +1,7 @@
 extends Node2D
 
 @export var drops_needed : int
+@onready var victory: AudioStreamPlayer2D = $AudioStreamPlayer2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -14,7 +15,7 @@ func _process(delta: float) -> void:
 func on_complete() -> void:
 	
 	var scene = get_tree().current_scene.name
-	
+	victory.play()
 	get_tree().paused = true
 	$AnimatedSprite2D.play("grow")
 	await get_tree().create_timer(1.0).timeout
