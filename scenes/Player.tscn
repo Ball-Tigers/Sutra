@@ -447,11 +447,6 @@ fall_state = NodePath("../Fall")
 duplicate_state = NodePath("../Duplicate")
 animation_name = "jump"
 
-[node name="jump" type="AudioStreamPlayer2D" parent="StateMachine/Jump"]
-stream = ExtResource("12_smmvy")
-volume_db = -10.895
-pitch_scale = 1.23
-
 [node name="Duplicate" type="Node" parent="StateMachine" node_paths=PackedStringArray("fall_state")]
 script = ExtResource("7_jtmji")
 fall_state = NodePath("../Fall")
@@ -484,6 +479,12 @@ emitting = false
 [node name="water_droplet" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("11_ufk45")
 volume_db = -8.914
+
+[node name="jump" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(-1, 0)
+stream = ExtResource("12_smmvy")
+volume_db = -8.914
+pitch_scale = 1.23
 
 [connection signal="body_entered" from="Layer 2 Collision" to="." method="_on_layer_2_collision_body_entered"]
 [connection signal="body_exited" from="Layer 2 Collision" to="." method="_on_layer_2_collision_body_exited"]

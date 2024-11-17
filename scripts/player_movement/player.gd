@@ -12,9 +12,11 @@ extends CharacterBody2D
 
 @onready var water_droplet: AudioStreamPlayer2D = $water_droplet
 
+
 func _ready() -> void:
 	state_machine.init(self)
 	total_shrink()
+	
 
 func _unhandled_input(event: InputEvent) -> void:
 	state_machine.process_input(event)
