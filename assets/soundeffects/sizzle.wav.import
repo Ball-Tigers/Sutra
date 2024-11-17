@@ -2,13 +2,13 @@
 
 importer="wav"
 type="AudioStreamWAV"
-uid="uid://dxe14vkt0l0t6"
-path="res://.godot/imported/Electric.wav-c0cf60d91552cf98deac3bfb0b2d1308.sample"
+uid="uid://ci1s28vbabd7i"
+path="res://.godot/imported/sizzle.wav-ac15d413500eb7a86d4da73aacfb1ecc.sample"
 
 [deps]
 
-source_file="res://scripts/Electric.wav"
-dest_files=["res://.godot/imported/Electric.wav-c0cf60d91552cf98deac3bfb0b2d1308.sample"]
+source_file="res://assets/soundeffects/sizzle.wav"
+dest_files=["res://.godot/imported/sizzle.wav-ac15d413500eb7a86d4da73aacfb1ecc.sample"]
 
 [params]
 

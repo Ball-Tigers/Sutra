@@ -1,7 +1,7 @@
 [gd_scene load_steps=13 format=3 uid="uid://gpsobeju6uer"]
 
 [ext_resource type="Texture2D" uid="uid://2nvykglkcr2b" path="res://assets/world/flower.png" id="1_d2jve"]
-[ext_resource type="Script" path="res://assets/sprites/flower.gd" id="1_ehpm5"]
+[ext_resource type="Script" path="res://scripts/flower.gd" id="1_ehpm5"]
 [ext_resource type="PackedScene" uid="uid://d3cfdfyv55d2b" path="res://scenes/WaterNeeded.tscn" id="2_byn6a"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_nsecj"]
