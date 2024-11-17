@@ -16,6 +16,6 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 		return
 	
 	if active:
-		sizzle.play()
 		Game.die()
+		sizzle.play()
 		

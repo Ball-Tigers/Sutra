@@ -9,15 +9,15 @@ extends CharacterBody2D
 @export var max_player_size = 5
 
 @export var default_projectile_force = 150
-
 @onready var water_droplet: AudioStreamPlayer2D = $water_droplet
-@onready var background_music: AudioStreamPlayer2D = $"../AudioStreamPlayer2D"
+@onready var background: AudioStreamPlayer2D = $background
+
 
 
 func _ready() -> void:
 	state_machine.init(self)
 	total_shrink()
-	
+	background.play()
 
 func _unhandled_input(event: InputEvent) -> void:
 	state_machine.process_input(event)
@@ -43,6 +43,7 @@ func grow() -> void:
 		$StateMachine/Jump.jump_speed = 350 - 20 * player_size
 		$StateMachine/Fall.jump_speed = 350 - 20 * player_size
 		$StateMachine/Duplicate.jump_speed = 350 - 20 * player_size
+		water_droplet.play()
 		#water_droplet.play()
 		
 	
