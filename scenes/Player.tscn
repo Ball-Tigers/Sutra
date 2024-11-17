@@ -483,7 +483,7 @@ volume_db = -8.914
 [node name="jump" type="AudioStreamPlayer2D" parent="."]
 position = Vector2(-1, 0)
 stream = ExtResource("12_smmvy")
-volume_db = -8.914
+volume_db = -11.885
 pitch_scale = 1.23
 
 [connection signal="body_entered" from="Layer 2 Collision" to="." method="_on_layer_2_collision_body_entered"]

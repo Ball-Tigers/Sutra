@@ -1,9 +1,9 @@
 [gd_scene load_steps=12 format=4 uid="uid://bmvy768m0l7kl"]
 
 [ext_resource type="TileSet" uid="uid://8lo8diqxm7c0" path="res://assets/tilesets/current_tile_set.tres" id="1_6hs1l"]
-[ext_resource type="PackedScene" uid="uid://pnldkxgdpxnl" path="res://scenes/Player.tscn" id="2_2072j"]
+[ext_resource type="PackedScene" uid="uid://bakg11xxg85vs" path="res://scenes/Player.tscn" id="2_2072j"]
 [ext_resource type="Texture2D" uid="uid://cul6h76gig7kq" path="res://assets/sprites/wire_sprite_sheet.png" id="2_yhdai"]
-[ext_resource type="PackedScene" uid="uid://bpg1tp6byoswr" path="res://scenes/HeatLamp.tscn" id="4_iyc67"]
+[ext_resource type="PackedScene" uid="uid://b02lydktyu0ah" path="res://scenes/HeatLamp.tscn" id="4_iyc67"]
 [ext_resource type="PackedScene" uid="uid://gfjjebi8mj0e" path="res://scenes/Droplet.tscn" id="5_eq01p"]
 [ext_resource type="Script" path="res://scripts/wire_1.gd" id="6_pfmup"]
 [ext_resource type="PackedScene" uid="uid://d3cfdfyv55d2b" path="res://scenes/WaterNeeded.tscn" id="7_u4lie"]
