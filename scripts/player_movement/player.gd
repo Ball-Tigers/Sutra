@@ -66,6 +66,16 @@ func total_shrink() -> void:
 	player_size = 1
 	self.scale.x = player_size * size_scaling
 	self.scale.y = player_size * size_scaling
+	$StateMachine/Walk.walk_speed = $StateMachine/Walk.default_walk_speed - 20 * player_size
+	$StateMachine/Idle.walk_speed = $StateMachine/Idle.default_walk_speed - 20 * player_size
+	$StateMachine/Jump.walk_speed = $StateMachine/Jump.default_walk_speed - 20 * player_size
+	$StateMachine/Fall.walk_speed = $StateMachine/Fall.default_walk_speed - 20 * player_size
+	$StateMachine/Duplicate.walk_speed = $StateMachine/Duplicate.default_walk_speed - 20 * player_size
+	$StateMachine/Walk.jump_speed = 350 - 20 * player_size
+	$StateMachine/Idle.jump_speed = 350 - 20 * player_size
+	$StateMachine/Jump.jump_speed = 350 - 20 * player_size
+	$StateMachine/Fall.jump_speed = 350 - 20 * player_size
+	$StateMachine/Duplicate.jump_speed = 350 - 20 * player_size
 
 func _on_layer_2_collision_body_entered(body: Node2D) -> void:
 	if body.is_in_group("Pushables"):
