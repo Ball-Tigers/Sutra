@@ -19,8 +19,8 @@ func _process(delta: float) -> void:
 		
 func set_size(size : int) -> void:
 	droplet_size = size
-	#self.scale.x = size * size_scaling
-	#self.scale.y = size * size_scaling
+	self.scale.x = size * size_scaling
+	self.scale.y = size * size_scaling
 
 func grow(drops : int) -> void:
 	if droplet_size < max_player_size:
@@ -33,6 +33,7 @@ func shrink(drops : int) -> void:
 		droplet_size -= drops
 		self.scale.x = droplet_size * size_scaling
 		self.scale.y = droplet_size * size_scaling
+
 
 func _on_area2D_body_entered(body: Node2D) -> void:
 	if timer > 0:

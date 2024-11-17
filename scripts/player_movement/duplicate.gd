@@ -23,6 +23,7 @@ func enter() -> void:
 #		set parent velocity
 		set_velocity(parent)
 		parent.total_shrink()
+		$"../../EjectParticle".emitting = true
 		
 #		
 			
