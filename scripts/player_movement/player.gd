@@ -42,7 +42,6 @@ func grow() -> void:
 		$StateMachine/Duplicate.jump_speed = 350 - 20 * player_size
 		self.scale.x = player_size - size_scaling
 		self.scale.y = player_size - size_scaling
-		water_droplet.play()
 		
 	
 func shrink() -> void:
