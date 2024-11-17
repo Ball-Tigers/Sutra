@@ -1,4 +1,4 @@
-[gd_scene load_steps=64 format=3 uid="uid://pnldkxgdpxnl"]
+[gd_scene load_steps=67 format=3 uid="uid://bakg11xxg85vs"]
 
 [ext_resource type="Texture2D" uid="uid://brjkp83hxfmw3" path="res://assets/sprites/water.png" id="1_dqkmd"]
 [ext_resource type="Script" path="res://scripts/player_movement/player.gd" id="1_hl5j7"]
@@ -10,6 +10,9 @@
 [ext_resource type="Script" path="res://scripts/player_movement/jump.gd" id="6_hlxcl"]
 [ext_resource type="Script" path="res://scripts/player_movement/duplicate.gd" id="7_jtmji"]
 [ext_resource type="PackedScene" uid="uid://bte7d0vgwmt5i" path="res://scenes/particles/PlayerJump.tscn" id="10_bfee7"]
+[ext_resource type="AudioStream" uid="uid://cb0m7v0k8jwhd" path="res://assets/soundeffects/water-drop.wav" id="11_ufk45"]
+[ext_resource type="AudioStream" uid="uid://bw36xk8agwdfi" path="res://assets/soundeffects/Shooting.wav" id="12_s17ws"]
+[ext_resource type="AudioStream" uid="uid://miy7nio1vays" path="res://assets/soundeffects/Jump.wav" id="12_smmvy"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_kihbc"]
 atlas = ExtResource("2_286wt")
@@ -449,6 +452,9 @@ script = ExtResource("7_jtmji")
 fall_state = NodePath("../Fall")
 animation_name = "idle"
 
+[node name="shooting" type="AudioStreamPlayer2D" parent="StateMachine/Duplicate"]
+stream = ExtResource("12_s17ws")
+
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(-1, 0)
 zoom = Vector2(2.5, 2.5)
@@ -469,6 +475,16 @@ one_shot = true
 [node name="DeathParticle" type="CPUParticles2D" parent="."]
 process_mode = 3
 emitting = false
+
+[node name="water_droplet" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("11_ufk45")
+volume_db = -8.914
+
+[node name="jump" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(-1, 0)
+stream = ExtResource("12_smmvy")
+volume_db = -8.914
+pitch_scale = 1.23
 
 [connection signal="body_entered" from="Layer 2 Collision" to="." method="_on_layer_2_collision_body_entered"]
 [connection signal="body_exited" from="Layer 2 Collision" to="." method="_on_layer_2_collision_body_exited"]
