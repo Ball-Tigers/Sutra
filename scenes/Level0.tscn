@@ -6,12 +6,12 @@
 [ext_resource type="Texture2D" uid="uid://cw08bqx08wv32" path="res://assets/world/backGround.png" id="5_qia0x"]
 [ext_resource type="PackedScene" uid="uid://gpsobeju6uer" path="res://scenes/Flower.tscn" id="6_lk5el"]
 [ext_resource type="Script" path="res://scripts/collision_shape_2d.gd" id="7_4fx8n"]
-[ext_resource type="PackedScene" uid="uid://cr3lmjp7hncxb" path="res://scenes/DropGenerator.tscn" id="7_neyol"]
+[ext_resource type="PackedScene" path="res://scenes/DropGenerator.tscn" id="7_neyol"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lrplj"]
 size = Vector2(8667, 1199)
 
-[node name="TutLevel" type="Node2D"]
+[node name="Level0" type="Node2D"]
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
 texture_filter = 1
@@ -22,7 +22,7 @@ tile_set = ExtResource("1_1otm7")
 [node name="Player" parent="." instance=ExtResource("2_1ac02")]
 position = Vector2(-1603, -31)
 
-[node name="Pebble" parent="." groups=["Pushables"] instance=ExtResource("4_t2nkt")]
+[node name="Pebble" parent="." instance=ExtResource("4_t2nkt")]
 position = Vector2(-1525, -10)
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
@@ -36,7 +36,7 @@ scale = Vector2(1.29896, 1.39815)
 texture = ExtResource("5_qia0x")
 
 [node name="Flower" parent="." instance=ExtResource("6_lk5el")]
-position = Vector2(3973, -348)
+position = Vector2(1108, -166)
 
 [node name="DropGenerator" parent="." instance=ExtResource("7_neyol")]
 position = Vector2(809, 57)
@@ -47,5 +47,29 @@ position = Vector2(809, 57)
 position = Vector2(640.5, 935.5)
 shape = SubResource("RectangleShape2D_lrplj")
 script = ExtResource("7_4fx8n")
+
+[node name="WASD" type="Label" parent="."]
+modulate = Color(0.63, 0.46557, 0.2898, 1)
+offset_left = -1718.0
+offset_top = 25.0
+offset_right = -1474.0
+offset_bottom = 48.0
+text = "Move with WASD or Arrow Keys"
+
+[node name="Split" type="Label" parent="."]
+modulate = Color(0.63, 0.46557, 0.2898, 1)
+offset_left = -210.0
+offset_top = -43.0
+offset_right = 34.0
+offset_bottom = -20.0
+text = "Split yourself with Left Click"
+
+[node name="Eject" type="Label" parent="."]
+modulate = Color(0.63, 0.46557, 0.2898, 1)
+offset_left = 631.0
+offset_top = 135.0
+offset_right = 875.0
+offset_bottom = 158.0
+text = "Eject with Right Click"
 
 [connection signal="body_shape_entered" from="Area2D" to="Area2D/CollisionShape2D" method="_on_area_2d_body_shape_entered"]
