@@ -1,6 +1,8 @@
+class_name HeatLamp
 extends Node2D
 
 @export var active : bool = true
+@export var id : int
 
 func _process(delta: float) -> void:
 	if not active:
