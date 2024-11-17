@@ -119,16 +119,16 @@ position = Vector2(-970, -141)
 drops_needed = 5
 
 [node name="Droplet" parent="." instance=ExtResource("6_lf62n")]
-position = Vector2(-1740, -16)
+position = Vector2(-1767, 2)
 
 [node name="Droplet2" parent="." instance=ExtResource("6_lf62n")]
-position = Vector2(-1879, -187)
+position = Vector2(-1875, -177)
 
 [node name="Droplet3" parent="." instance=ExtResource("6_lf62n")]
-position = Vector2(-1835, -189)
+position = Vector2(-1839, -177)
 
 [node name="Droplet4" parent="." instance=ExtResource("6_lf62n")]
-position = Vector2(-1791, -38)
+position = Vector2(-1794, 3)
 
 [node name="Wire3" type="Node2D" parent="."]
 position = Vector2(-1781, -167)
