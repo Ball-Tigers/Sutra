@@ -1,14 +1,15 @@
-[gd_scene load_steps=13 format=4 uid="uid://bmvy768m0l7kl"]
+[gd_scene load_steps=14 format=4 uid="uid://bmvy768m0l7kl"]
 
 [ext_resource type="TileSet" uid="uid://8lo8diqxm7c0" path="res://assets/tilesets/current_tile_set.tres" id="1_6hs1l"]
-[ext_resource type="PackedScene" uid="uid://pnldkxgdpxnl" path="res://scenes/Player.tscn" id="2_2072j"]
+[ext_resource type="PackedScene" uid="uid://bakg11xxg85vs" path="res://scenes/Player.tscn" id="2_2072j"]
 [ext_resource type="Texture2D" uid="uid://cul6h76gig7kq" path="res://assets/sprites/wire_sprite_sheet.png" id="2_yhdai"]
 [ext_resource type="PackedScene" uid="uid://bpg1tp6byoswr" path="res://scenes/HeatLamp.tscn" id="4_iyc67"]
 [ext_resource type="PackedScene" uid="uid://gfjjebi8mj0e" path="res://scenes/Droplet.tscn" id="5_eq01p"]
 [ext_resource type="Script" path="res://scripts/wire_1.gd" id="6_pfmup"]
-[ext_resource type="PackedScene" uid="uid://cqbowuapjvrrr" path="res://scenes/WaterNeeded.tscn" id="7_u4lie"]
+[ext_resource type="PackedScene" uid="uid://d3cfdfyv55d2b" path="res://scenes/WaterNeeded.tscn" id="7_u4lie"]
 [ext_resource type="Script" path="res://scripts/wire_2.gd" id="8_ee2te"]
 [ext_resource type="PackedScene" uid="uid://gpsobeju6uer" path="res://scenes/Flower.tscn" id="9_q47kc"]
+[ext_resource type="AudioStream" uid="uid://cmptmk0nyeu86" path="res://assets/soundeffects/Electric.wav" id="10_bev86"]
 [ext_resource type="Texture2D" uid="uid://cw08bqx08wv32" path="res://assets/world/backGround.png" id="10_j78cj"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_plcob"]
@@ -135,11 +136,19 @@ script = ExtResource("6_pfmup")
 [node name="WaterNeeded" parent="Wire1" instance=ExtResource("7_u4lie")]
 position = Vector2(-412, -30)
 
+[node name="electric" type="AudioStreamPlayer2D" parent="Wire1"]
+stream = ExtResource("10_bev86")
+volume_db = -13.867
+
 [node name="Wire2" type="Node2D" parent="."]
 script = ExtResource("8_ee2te")
 
 [node name="WaterNeeded" parent="Wire2" instance=ExtResource("7_u4lie")]
 position = Vector2(570, -21)
+
+[node name="electric" type="AudioStreamPlayer2D" parent="Wire2"]
+stream = ExtResource("10_bev86")
+volume_db = -13.867
 
 [node name="Flower" parent="." instance=ExtResource("9_q47kc")]
 position = Vector2(675, -17)
