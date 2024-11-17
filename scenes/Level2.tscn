@@ -6,7 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://bpg1tp6byoswr" path="res://scenes/HeatLamp.tscn" id="4_iyc67"]
 [ext_resource type="PackedScene" uid="uid://gfjjebi8mj0e" path="res://scenes/Droplet.tscn" id="5_eq01p"]
 [ext_resource type="Script" path="res://scripts/wire_1.gd" id="6_pfmup"]
-[ext_resource type="PackedScene" uid="uid://cqbowuapjvrrr" path="res://scenes/WaterNeeded.tscn" id="7_u4lie"]
+[ext_resource type="PackedScene" uid="uid://d3cfdfyv55d2b" path="res://scenes/WaterNeeded.tscn" id="7_u4lie"]
 [ext_resource type="Script" path="res://scripts/wire_2.gd" id="8_ee2te"]
 [ext_resource type="PackedScene" uid="uid://gpsobeju6uer" path="res://scenes/Flower.tscn" id="9_q47kc"]
 
