@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=4 uid="uid://bmvy768m0l7kl"]
+[gd_scene load_steps=13 format=4 uid="uid://bmvy768m0l7kl"]
 
 [ext_resource type="TileSet" uid="uid://8lo8diqxm7c0" path="res://assets/tilesets/current_tile_set.tres" id="1_6hs1l"]
 [ext_resource type="PackedScene" uid="uid://bakg11xxg85vs" path="res://scenes/Player.tscn" id="2_2072j"]
@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://d3cfdfyv55d2b" path="res://scenes/WaterNeeded.tscn" id="7_u4lie"]
 [ext_resource type="Script" path="res://scripts/wire_2.gd" id="8_ee2te"]
 [ext_resource type="PackedScene" uid="uid://gpsobeju6uer" path="res://scenes/Flower.tscn" id="9_q47kc"]
+[ext_resource type="AudioStream" uid="uid://cmptmk0nyeu86" path="res://assets/soundeffects/Electric.wav" id="10_bev86"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_elaeh"]
 texture = ExtResource("2_yhdai")
@@ -143,3 +144,7 @@ position = Vector2(570, -21)
 [node name="Flower" parent="." instance=ExtResource("9_q47kc")]
 position = Vector2(675, -17)
 drops_needed = 5
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("10_bev86")
+volume_db = -7.924
