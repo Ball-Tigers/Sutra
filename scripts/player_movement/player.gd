@@ -10,7 +10,7 @@ extends CharacterBody2D
 
 @export var default_projectile_force = 150
 
-@onready var water_droplet: AudioStreamPlayer2D = $WaterDroplet
+@onready var water_droplet: AudioStreamPlayer2D = $water_droplet
 
 func _ready() -> void:
 	state_machine.init(self)
