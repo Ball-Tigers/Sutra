@@ -136,19 +136,11 @@ script = ExtResource("6_pfmup")
 [node name="WaterNeeded" parent="Wire1" instance=ExtResource("7_u4lie")]
 position = Vector2(-412, -30)
 
-[node name="electric" type="AudioStreamPlayer2D" parent="Wire1"]
-stream = ExtResource("10_bev86")
-volume_db = -13.867
-
 [node name="Wire2" type="Node2D" parent="."]
 script = ExtResource("8_ee2te")
 
 [node name="WaterNeeded" parent="Wire2" instance=ExtResource("7_u4lie")]
 position = Vector2(570, -21)
-
-[node name="electric" type="AudioStreamPlayer2D" parent="Wire2"]
-stream = ExtResource("10_bev86")
-volume_db = -13.867
 
 [node name="Flower" parent="." instance=ExtResource("9_q47kc")]
 position = Vector2(675, -17)
@@ -164,3 +156,7 @@ motion_scale = Vector2(0.05, 0.05)
 position = Vector2(354, 38)
 scale = Vector2(1.30625, 1.02037)
 texture = ExtResource("10_j78cj")
+
+[node name="electric" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("10_bev86")
+volume_db = -9.905

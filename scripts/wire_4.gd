@@ -1,5 +1,6 @@
 extends Node2D
-@onready var electric: AudioStreamPlayer2D = $Wire1/electric
+
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	pass # Replace with function body.
@@ -11,7 +12,7 @@ func _process(delta: float) -> void:
 
 func on_complete() -> void:
 	var array = $"..".get_children()
-	#electric.play()
+	
 	for item in array:
 		var lamp := item as HeatLamp
 		if lamp && lamp.id == 1:
