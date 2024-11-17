@@ -32,7 +32,7 @@ func enter() -> void:
 			
 	elif Input.is_action_just_pressed("shoot"):
 #		Set character to size - 1, shoot blob of size 1
-		print(parent.player_size)
+		
 		parent.shrink()
 		shooting.play()
 		
@@ -58,8 +58,7 @@ func set_velocity(node: Node2D) -> void:
 		drop.apply_impulse(vector_pos * projectile_force)
 		return
 	
-	print("Mouse pos", mouse_pos)
-	print("Player pos", player.position)
+	
 	var angle = atan2(vector_pos.x, vector_pos.y)
 	node.velocity.x = projectile_force * vector_pos.x
 	node.velocity.y = projectile_force * vector_pos.y

@@ -16,13 +16,7 @@ func _process(delta: float) -> void:
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	var player := body as Player
-	if player:
-		if player.player_size < 3:
-			print()
-			#set_freeze_enabled(true)
-		else:
-			print()
-			#set_freeze_enabled(false)
+	
 
 
 func _on_area_2d_body_exited(body: Node2D) -> void:
