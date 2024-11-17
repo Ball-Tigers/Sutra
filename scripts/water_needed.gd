@@ -12,7 +12,6 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 	if player:
 		drops_count += player.player_size
 	if drops_count >= drops_needed:
-		print("Condition complete")
 		get_parent().on_complete()
 
 
