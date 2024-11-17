@@ -9,15 +9,15 @@ extends CharacterBody2D
 @export var max_player_size = 5
 
 @export var default_projectile_force = 150
-
-@onready var water_droplet: AudioStreamPlayer2D = $water_droplet
-@onready var background_music: AudioStreamPlayer2D = $"../AudioStreamPlayer2D"
+@onready var background_music: AudioStreamPlayer2D = $background_music
 
 
 func _ready() -> void:
 	state_machine.init(self)
 	total_shrink()
+	background_music.play()
 	
+
 
 func _unhandled_input(event: InputEvent) -> void:
 	state_machine.process_input(event)
