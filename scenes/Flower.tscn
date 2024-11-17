@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://2nvykglkcr2b" path="res://assets/world/flower.png" id="1_d2jve"]
 [ext_resource type="Script" path="res://assets/sprites/flower.gd" id="1_ehpm5"]
-[ext_resource type="PackedScene" path="res://scenes/WaterNeeded.tscn" id="2_byn6a"]
+[ext_resource type="PackedScene" uid="uid://d3cfdfyv55d2b" path="res://scenes/WaterNeeded.tscn" id="2_byn6a"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_nsecj"]
 atlas = ExtResource("1_d2jve")

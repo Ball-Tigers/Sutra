@@ -446,6 +446,12 @@ animation_name = "jump"
 script = ExtResource("7_jtmji")
 fall_state = NodePath("../Fall")
 animation_name = "idle"
+walk_speed = null
+jump_speed = null
+walk_acc = null
+walk_dec = null
+player_size = null
+projectile_force = null
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(-1, 0)

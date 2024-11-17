@@ -4,6 +4,8 @@ extends RigidBody2D
 @export var droplet_size = 1
 @export var size_scaling = 0.5
 @export var max_player_size = 5
+@onready var water_droplet: AudioStreamPlayer2D = $Area2D/AudioStreamPlayer2D
+
 
 var timer : float = 0.1
 
@@ -36,14 +38,19 @@ func _on_area2D_body_entered(body: Node2D) -> void:
 	if timer > 0:
 		return
 	var player := body as Player
+	
 	if player:
 		for i in droplet_size:
 			player.grow()
+			water_droplet.play()
 			shrink(1)
 		if droplet_size == 0:
 			self.queue_free()
+		
+		
 	var droplet := body as Droplet
 	if droplet && not droplet == self:
 		grow(droplet.droplet_size)
 		droplet.free()
+	
 	

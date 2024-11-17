@@ -1,7 +1,8 @@
-[gd_scene load_steps=24 format=3 uid="uid://gfjjebi8mj0e"]
+[gd_scene load_steps=25 format=3 uid="uid://gfjjebi8mj0e"]
 
 [ext_resource type="Script" path="res://scripts/droplet.gd" id="1_mdkds"]
 [ext_resource type="Texture2D" uid="uid://dhlx7wxephhsx" path="res://assets/sprites/droplet_spritesheet.png" id="2_wu8x8"]
+[ext_resource type="AudioStream" uid="uid://cb0m7v0k8jwhd" path="res://assets/soundeffects/water-drop.wav" id="3_f7f51"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3u3im"]
 size = Vector2(20, 13)
@@ -173,5 +174,8 @@ frame_progress = 0.805979
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 position = Vector2(0, 3)
 shape = SubResource("RectangleShape2D_dvqa7")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Area2D"]
+stream = ExtResource("3_f7f51")
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area2D_body_entered"]
