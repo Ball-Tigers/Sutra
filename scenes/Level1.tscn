@@ -116,6 +116,7 @@ id = 2
 
 [node name="Flower" parent="." instance=ExtResource("5_rlakn")]
 position = Vector2(-970, -141)
+drops_needed = 5
 
 [node name="Droplet" parent="." instance=ExtResource("6_lf62n")]
 position = Vector2(-1740, -16)
