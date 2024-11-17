@@ -50,7 +50,7 @@ func set_velocity(node: Node2D) -> void:
 
 	var drop := node as Droplet
 	if drop:
-		drop.position += vector_pos * 10 * player_size
+		drop.position += vector_pos * 10 * parent.player_size
 		drop.apply_impulse(vector_pos * projectile_force)
 		return
 	

@@ -2,15 +2,10 @@ extends Node2D
 
 @export var active : bool = true
 
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	pass # Replace with function body.
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	pass
-
+	if not active:
+		$CPUParticles2D.emitting = false
+		$CPUParticles2D2.emitting = false
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	var player := body as Player
@@ -19,4 +14,5 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 	
 	if active:
 		print("player died :(")
-		get_tree().reload_current_scene()
+		Game.die()
+		
