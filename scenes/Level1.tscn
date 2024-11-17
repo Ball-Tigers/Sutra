@@ -88,7 +88,7 @@ terrain_set_0/terrain_0/name = "Wire"
 terrain_set_0/terrain_0/color = Color(1, 0, 0, 1)
 sources/0 = SubResource("TileSetAtlasSource_1hvu6")
 
-[node name="2dNode" type="Node2D"]
+[node name="Level1" type="Node2D"]
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
 texture_filter = 1
