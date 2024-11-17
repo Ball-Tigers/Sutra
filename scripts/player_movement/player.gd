@@ -9,15 +9,15 @@ extends CharacterBody2D
 @export var max_player_size = 5
 
 @export var default_projectile_force = 150
-
-@onready var water_droplet: AudioStreamPlayer2D = $water_droplet
-@onready var background_music: AudioStreamPlayer2D = $"../AudioStreamPlayer2D"
+@onready var background_music: AudioStreamPlayer2D = $background_music
 
 
 func _ready() -> void:
 	state_machine.init(self)
 	total_shrink()
+	background_music.play()
 	
+
 
 func _unhandled_input(event: InputEvent) -> void:
 	state_machine.process_input(event)
@@ -72,14 +72,7 @@ func _on_layer_2_collision_body_entered(body: Node2D) -> void:
 		body.collision_layer = 1
 		body.collision_mask = 1
 
-func die() -> void:
-	$DeathParticle.emitting = true
-
 func _on_layer_2_collision_body_exited(body: Node2D) -> void:
 	if body.is_in_group("Pushables"):
 		body.collision_layer = 2
 		body.collision_mask = 2
-
-
-func _on_area_2d_body_shape_entered(body_rid: RID, body: Node2D, body_shape_index: int, local_shape_index: int) -> void:
-	pass # Replace with function body.

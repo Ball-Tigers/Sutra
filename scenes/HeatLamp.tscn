@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://bpg1tp6byoswr"]
+[gd_scene load_steps=5 format=3 uid="uid://b02lydktyu0ah"]
 
 [ext_resource type="Script" path="res://scripts/heat_lamp.gd" id="1_ulb0i"]
 [ext_resource type="Texture2D" uid="uid://8p7tk5dxlnr1" path="res://assets/sprites/heat_lamp.png" id="2_3b7px"]
@@ -15,6 +15,7 @@ size = Vector2(79, 68.5)
 script = ExtResource("1_ulb0i")
 
 [node name="CPUParticles2D" type="CPUParticles2D" parent="."]
+process_mode = 3
 position = Vector2(-19, 6)
 amount = 30
 explosiveness = 0.25
@@ -31,6 +32,7 @@ hue_variation_max = 0.5
 hue_variation_curve = SubResource("Curve_5uk1q")
 
 [node name="CPUParticles2D2" type="CPUParticles2D" parent="."]
+process_mode = 3
 position = Vector2(19, 6)
 amount = 30
 explosiveness = 0.25

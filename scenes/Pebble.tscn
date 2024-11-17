@@ -1,6 +1,5 @@
-[gd_scene load_steps=5 format=3 uid="uid://cmtj2n816rdmf"]
+[gd_scene load_steps=4 format=3 uid="uid://cmtj2n816rdmf"]
 
-[ext_resource type="Script" path="res://scripts/pushable.gd" id="1_3fke3"]
 [ext_resource type="Texture2D" uid="uid://bjklufajn7u0u" path="res://assets/sprites/pebble.png" id="2_3gogt"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_11g72"]
@@ -18,7 +17,6 @@ lock_rotation = true
 freeze_mode = 1
 contact_monitor = true
 max_contacts_reported = 23
-script = ExtResource("1_3fke3")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(12, 21)
@@ -32,10 +30,9 @@ texture = ExtResource("2_3gogt")
 [node name="Area2D" type="Area2D" parent="."]
 collision_layer = 2
 collision_mask = 2
+monitoring = false
+monitorable = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 position = Vector2(12, 8)
 shape = SubResource("RectangleShape2D_lvka2")
-
-[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
-[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]
