@@ -13,3 +13,16 @@ func reset() -> void:
 func _process(_delta: float) -> void:
 	if(Input.is_action_just_pressed("Reset")):
 		get_tree().change_scene_to_packed(currLevel)
+		
+func level_end(scene):
+	
+	
+	match(scene):
+		'Test':
+			get_tree().change_scene_to_file("res://scenes/Level0.tscn")
+		'Level0':
+			get_tree().change_scene_to_file("res://scenes/Level1.tscn")
+		'Level1':
+			get_tree().change_scene_to_file("res://scenes/Level2.tscn")
+		_:
+			get_tree().change_scene_to_file("res://scenes/MainMenu.tscn")

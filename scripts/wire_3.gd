@@ -15,5 +15,5 @@ func on_complete() -> void:
 	electric.play()
 	for item in array:
 		var lamp := item as HeatLamp
-		if lamp && lamp.id == 3:
+		if lamp && lamp.id == 0:
 			lamp.active = false

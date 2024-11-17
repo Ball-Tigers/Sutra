@@ -4,13 +4,11 @@ extends State
 @export var idle_state: State
 @export var jump_state: State
 @export var duplicate_state: State
-@onready var walking: AudioStreamPlayer2D = $"../../walking"
 
 
 func enter() -> void:
 	super()
 	parent.animations.set_frame_and_progress($"..".last_movement_frame, 0)
-	
 	
 func exit() -> void:
 	$"..".last_movement_frame = parent.animations.frame
@@ -33,16 +31,13 @@ func process_physics(delta: float) -> State:
 	if Input.is_action_pressed("right"):
 		parent.velocity.x = max(parent.velocity.x, move_toward(parent.velocity.x, walk_speed, walk_acc))
 		parent.animations.flip_h = false
-		
 	elif Input.is_action_pressed("left"):
 		parent.velocity.x = min(parent.velocity.x, move_toward(parent.velocity.x, -walk_speed, walk_acc))
 		parent.animations.flip_h = true
-		
 	else:
 		if parent.velocity.x == 0: 
 			return idle_state
 		parent.velocity.x = lerp(parent.velocity.x, 0.0, walk_dec)
-		walking.play()
 		
 	parent.move_and_slide()
 	return null

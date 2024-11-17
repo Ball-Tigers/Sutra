@@ -1,4 +1,4 @@
-[gd_scene load_steps=69 format=3 uid="uid://pnldkxgdpxnl"]
+[gd_scene load_steps=67 format=3 uid="uid://pnldkxgdpxnl"]
 
 [ext_resource type="Texture2D" uid="uid://brjkp83hxfmw3" path="res://assets/sprites/water.png" id="1_dqkmd"]
 [ext_resource type="Script" path="res://scripts/player_movement/player.gd" id="1_hl5j7"]
@@ -13,8 +13,6 @@
 [ext_resource type="AudioStream" uid="uid://cb0m7v0k8jwhd" path="res://assets/soundeffects/water-drop.wav" id="11_ufk45"]
 [ext_resource type="AudioStream" uid="uid://bw36xk8agwdfi" path="res://assets/soundeffects/Shooting.wav" id="12_s17ws"]
 [ext_resource type="AudioStream" uid="uid://miy7nio1vays" path="res://assets/soundeffects/Jump.wav" id="12_smmvy"]
-[ext_resource type="AudioStream" uid="uid://cdt08vhbsstop" path="res://assets/Music/BackgroundMusic.mp3" id="14_pe1or"]
-[ext_resource type="AudioStream" uid="uid://bsc7gk5ssntlv" path="res://assets/soundeffects/Walk.wav" id="15_271sr"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_kihbc"]
 atlas = ExtResource("2_286wt")
@@ -456,7 +454,6 @@ animation_name = "idle"
 
 [node name="shooting" type="AudioStreamPlayer2D" parent="StateMachine/Duplicate"]
 stream = ExtResource("12_s17ws")
-volume_db = -9.905
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(-1, 0)
@@ -486,18 +483,8 @@ volume_db = -8.914
 [node name="jump" type="AudioStreamPlayer2D" parent="."]
 position = Vector2(-1, 0)
 stream = ExtResource("12_smmvy")
-volume_db = -20.8
-pitch_scale = 1.11
-
-[node name="background_music" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("14_pe1or")
-volume_db = -29.769
-autoplay = true
-
-[node name="walking" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("15_271sr")
-volume_db = -10.895
-autoplay = true
+volume_db = -8.914
+pitch_scale = 1.23
 
 [connection signal="body_entered" from="Layer 2 Collision" to="." method="_on_layer_2_collision_body_entered"]
 [connection signal="body_exited" from="Layer 2 Collision" to="." method="_on_layer_2_collision_body_exited"]
