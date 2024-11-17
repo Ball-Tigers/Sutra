@@ -7,7 +7,6 @@ extends Node2D
 func _ready() -> void:
 	$WaterNeeded.drops_needed = drops_needed
 
-
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	pass
@@ -15,7 +14,7 @@ func _process(delta: float) -> void:
 func on_complete() -> void:
 	
 	var scene = get_tree().current_scene.name
-	victory.play()
+	#victory.play()
 	get_tree().paused = true
 	$AnimatedSprite2D.play("grow")
 	await get_tree().create_timer(1.0).timeout

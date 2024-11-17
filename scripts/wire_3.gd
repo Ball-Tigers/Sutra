@@ -12,7 +12,7 @@ func _process(delta: float) -> void:
 
 func on_complete() -> void:
 	var array = $"..".get_children()
-	electric.play()
+	#electric.play()
 	for item in array:
 		var lamp := item as HeatLamp
 		if lamp && lamp.id == 0:

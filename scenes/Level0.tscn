@@ -1,7 +1,7 @@
 [gd_scene load_steps=10 format=4 uid="uid://cxfd4yrg0dmrs"]
 
 [ext_resource type="TileSet" uid="uid://8lo8diqxm7c0" path="res://assets/tilesets/current_tile_set.tres" id="1_1otm7"]
-[ext_resource type="PackedScene" uid="uid://bakg11xxg85vs" path="res://scenes/Player.tscn" id="2_1ac02"]
+[ext_resource type="PackedScene" uid="uid://pnldkxgdpxnl" path="res://scenes/Player.tscn" id="2_1ac02"]
 [ext_resource type="PackedScene" uid="uid://cmtj2n816rdmf" path="res://scenes/Pebble.tscn" id="4_t2nkt"]
 [ext_resource type="Texture2D" uid="uid://cw08bqx08wv32" path="res://assets/world/backGround.png" id="5_qia0x"]
 [ext_resource type="PackedScene" uid="uid://gpsobeju6uer" path="res://scenes/Flower.tscn" id="6_lk5el"]
@@ -38,7 +38,8 @@ scale = Vector2(1.29896, 1.39815)
 texture = ExtResource("5_qia0x")
 
 [node name="Flower" parent="." instance=ExtResource("6_lk5el")]
-position = Vector2(1108, -166)
+position = Vector2(1108, -158)
+drops_needed = 1
 
 [node name="DropGenerator" parent="." instance=ExtResource("7_neyol")]
 position = Vector2(809, 57)
@@ -73,6 +74,14 @@ offset_top = 135.0
 offset_right = 875.0
 offset_bottom = 158.0
 text = "Eject with Right Click"
+
+[node name="Flower2" type="Label" parent="."]
+modulate = Color(0.63, 0.46557, 0.2898, 1)
+offset_left = 1030.0
+offset_top = -125.0
+offset_right = 1274.0
+offset_bottom = -102.0
+text = "Water the flower!"
 
 [node name="Droplet" parent="." instance=ExtResource("8_vvki7")]
 position = Vector2(-222, -65)

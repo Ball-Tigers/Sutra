@@ -11,9 +11,9 @@ func reset() -> void:
 	get_tree().reload_current_scene()
 	
 func _process(_delta: float) -> void:
-	if(Input.is_action_just_pressed("Reset")):
+	if(Input.is_action_just_pressed("reset")):
 		get_tree().change_scene_to_packed(currLevel)
-	elif(Input.is_action_just_pressed("Menu")):
+	elif(Input.is_action_just_pressed("menu")):
 		get_tree().change_scene_to_file("res://scenes/MainMenu.tscn")
 		
 func level_end(scene):

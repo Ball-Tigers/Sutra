@@ -89,7 +89,3 @@ func _on_layer_2_collision_body_exited(body: Node2D) -> void:
 	if body.is_in_group("Pushables"):
 		body.collision_layer = 2
 		body.collision_mask = 2
-
-
-func _on_area_2d_body_shape_entered(body_rid: RID, body: Node2D, body_shape_index: int, local_shape_index: int) -> void:
-	pass # Replace with function body.

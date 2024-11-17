@@ -1,9 +1,9 @@
-[gd_scene load_steps=14 format=4 uid="uid://kvi4kosymm6"]
+[gd_scene load_steps=15 format=4 uid="uid://kvi4kosymm6"]
 
 [ext_resource type="TileSet" uid="uid://8lo8diqxm7c0" path="res://assets/tilesets/current_tile_set.tres" id="1_wbtcm"]
 [ext_resource type="PackedScene" uid="uid://pnldkxgdpxnl" path="res://scenes/Player.tscn" id="2_fx653"]
 [ext_resource type="Texture2D" uid="uid://cul6h76gig7kq" path="res://assets/sprites/wire_sprite_sheet.png" id="2_hsfsg"]
-[ext_resource type="PackedScene" uid="uid://bpg1tp6byoswr" path="res://scenes/HeatLamp.tscn" id="4_h6oey"]
+[ext_resource type="PackedScene" uid="uid://b02lydktyu0ah" path="res://scenes/HeatLamp.tscn" id="4_h6oey"]
 [ext_resource type="PackedScene" uid="uid://gpsobeju6uer" path="res://scenes/Flower.tscn" id="5_rlakn"]
 [ext_resource type="PackedScene" uid="uid://gfjjebi8mj0e" path="res://scenes/Droplet.tscn" id="6_lf62n"]
 [ext_resource type="Script" path="res://scripts/wire_3.gd" id="7_m01gn"]
@@ -89,6 +89,9 @@ terrain_set_0/terrain_0/name = "Wire"
 terrain_set_0/terrain_0/color = Color(1, 0, 0, 1)
 sources/0 = SubResource("TileSetAtlasSource_1hvu6")
 
+[sub_resource type="LabelSettings" id="LabelSettings_ch56d"]
+font_size = 12
+
 [node name="Level1" type="Node2D"]
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
@@ -164,3 +167,28 @@ motion_scale = Vector2(0.05, 0.05)
 position = Vector2(478, -39)
 scale = Vector2(1.07695, 0.950925)
 texture = ExtResource("11_q2rt1")
+
+[node name="Warning" type="Label" parent="."]
+offset_left = -1939.0
+offset_top = -166.0
+offset_right = -1622.0
+offset_bottom = -143.0
+text = "Stand in wires to short circuit heat lamps
+"
+label_settings = SubResource("LabelSettings_ch56d")
+
+[node name="Warning2" type="Label" parent="."]
+offset_left = -1493.0
+offset_top = 19.0
+offset_right = -1176.0
+offset_bottom = 42.0
+text = "Watch out for heat lamps!"
+label_settings = SubResource("LabelSettings_ch56d")
+
+[node name="num" type="Label" parent="."]
+offset_left = -1107.0
+offset_top = -105.0
+offset_right = -790.0
+offset_bottom = -82.0
+text = "Make sure you have enough water!"
+label_settings = SubResource("LabelSettings_ch56d")
