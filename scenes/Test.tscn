@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://pnldkxgdpxnl" path="res://scenes/Player.tscn" id="1_va60e"]
 [ext_resource type="PackedScene" uid="uid://cmtj2n816rdmf" path="res://scenes/Pebble.tscn" id="2_g2rqu"]
 [ext_resource type="PackedScene" uid="uid://gpsobeju6uer" path="res://scenes/Flower.tscn" id="4_0d4b4"]
-[ext_resource type="PackedScene" uid="uid://bswjhob4q6f0i" path="res://scenes/Droplet.tscn" id="5_4abvv"]
+[ext_resource type="PackedScene" uid="uid://gfjjebi8mj0e" path="res://scenes/Droplet.tscn" id="5_4abvv"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_g17tn"]
 size = Vector2(335, 20)

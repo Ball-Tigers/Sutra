@@ -42,8 +42,7 @@ func grow() -> void:
 		$StateMachine/Jump.jump_speed = 350 - 20 * player_size
 		$StateMachine/Fall.jump_speed = 350 - 20 * player_size
 		$StateMachine/Duplicate.jump_speed = 350 - 20 * player_size
-		self.scale.x = player_size - size_scaling
-		self.scale.y = player_size - size_scaling
+		#water_droplet.play()
 		
 	
 func shrink() -> void:
@@ -56,6 +55,11 @@ func shrink() -> void:
 		$StateMachine/Jump.walk_speed = $StateMachine/Jump.default_walk_speed - 20 * player_size
 		$StateMachine/Fall.walk_speed = $StateMachine/Fall.default_walk_speed - 20 * player_size
 		$StateMachine/Duplicate.walk_speed = $StateMachine/Duplicate.default_walk_speed - 20 * player_size
+		$StateMachine/Walk.jump_speed = 350 - 20 * player_size
+		$StateMachine/Idle.jump_speed = 350 - 20 * player_size
+		$StateMachine/Jump.jump_speed = 350 - 20 * player_size
+		$StateMachine/Fall.jump_speed = 350 - 20 * player_size
+		$StateMachine/Duplicate.jump_speed = 350 - 20 * player_size
 
 func total_shrink() -> void:
 	player_size = 1
