@@ -3,7 +3,8 @@ extends Node
 
 @export var animation_name: String
 # Speeds
-@export var walk_speed = 100.0
+@export var default_walk_speed = 180.0
+var walk_speed = 150.0
 @export var jump_speed = 350.0
 
 # Accelerations
@@ -13,9 +14,6 @@ extends Node
 # Player sizing
 @export var player_size = 1
 const max_player_size = 5
-
-# Duplication
-@export var projectile_force = 100
 
 var gravity: int = ProjectSettings.get_setting("physics/2d/default_gravity")
 
@@ -36,3 +34,4 @@ func process_frame(_delta: float) -> State:
 
 func process_physics(_delta: float) -> State:
 	return null
+	
