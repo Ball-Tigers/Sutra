@@ -10,6 +10,8 @@ extends CharacterBody2D
 
 @export var default_projectile_force = 150
 
+@onready var water_droplet: AudioStreamPlayer2D = $WaterDroplet
+
 func _ready() -> void:
 	state_machine.init(self)
 	total_shrink()
@@ -28,6 +30,8 @@ func grow() -> void:
 		player_size += 1
 		self.scale.x = player_size - size_scaling
 		self.scale.y = player_size - size_scaling
+		water_droplet.play()
+		
 	
 func shrink() -> void:
 	if player_size > 1:
