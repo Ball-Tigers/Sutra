@@ -161,6 +161,6 @@ drops_needed = 1
 motion_scale = Vector2(0.05, 0.05)
 
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
-position = Vector2(473, -77)
+position = Vector2(478, -39)
 scale = Vector2(1.07695, 0.950925)
 texture = ExtResource("11_q2rt1")
