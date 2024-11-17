@@ -3,6 +3,8 @@ extends State
 @export var fall_state: State
 
 @onready var newDroplet = preload("res://scenes/Droplet.tscn")
+@onready var shooting: AudioStreamPlayer2D = $shooting
+
 
 func enter() -> void:
 	super()
@@ -19,6 +21,7 @@ func enter() -> void:
 		blob.set_size(parent.player_size - 1)
 		blob.position = parent.position
 		add_sibling(blob)
+		shooting.play()
 		
 #		set parent velocity
 		set_velocity(parent)
@@ -31,6 +34,7 @@ func enter() -> void:
 #		Set character to size - 1, shoot blob of size 1
 		print(parent.player_size)
 		parent.shrink()
+		shooting.play()
 		
 		var blob = newDroplet.instantiate()
 		blob.set_size(1)

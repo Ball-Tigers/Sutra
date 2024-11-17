@@ -2,10 +2,13 @@ extends State
 
 @export var fall_state: State
 @export var duplicate_state: State
+@onready var jump: AudioStreamPlayer2D = $jump
 
 func enter() -> void:
 	super()
 	parent.velocity.y = -jump_speed
+	jump.play()
+	
 	
 func process_frame(_delta: float) -> State:
 	if parent.velocity.y > 0.0:
@@ -24,6 +27,7 @@ func process_physics(delta: float) -> State:
 		var temp = move_toward(parent.velocity.x, walk_speed, walk_acc)
 		parent.velocity.x = max(parent.velocity.x, temp)
 		parent.animations.flip_h = false
+		
 
 	elif Input.is_action_pressed("left"):
 		parent.velocity.x = min(parent.velocity.x, move_toward(parent.velocity.x, -walk_speed, walk_acc))
@@ -31,6 +35,9 @@ func process_physics(delta: float) -> State:
 
 	if Input.is_action_just_released('jump'):
 		parent.velocity.y *= 0.5
+		
+		
+		
 	
 	parent.move_and_slide()
 	return null

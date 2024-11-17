@@ -5,6 +5,7 @@ extends State
 @export var jump_state: State
 @export var duplicate_state: State
 
+
 func enter() -> void:
 	super()
 	parent.animations.set_frame_and_progress($"..".last_movement_frame, 0)
