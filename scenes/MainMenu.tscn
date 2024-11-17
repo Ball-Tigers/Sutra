@@ -41,6 +41,7 @@ theme = SubResource("Theme_pgunh")
 text = "Level 1"
 
 [node name="Level2_button" type="Button" parent="."]
+layout_mode = 0
 offset_left = 496.0
 offset_top = 241.0
 offset_right = 679.0
@@ -49,6 +50,7 @@ theme = SubResource("Theme_pgunh")
 text = "Level 2"
 
 [node name="Level3_button" type="Button" parent="."]
+layout_mode = 0
 offset_left = 761.0
 offset_top = 243.0
 offset_right = 944.0

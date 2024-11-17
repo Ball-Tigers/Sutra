@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=4 uid="uid://kvi4kosymm6"]
+[gd_scene load_steps=14 format=4 uid="uid://ckma2t0eyfc5o"]
 
 [ext_resource type="TileSet" uid="uid://8lo8diqxm7c0" path="res://assets/tilesets/current_tile_set.tres" id="1_wbtcm"]
 [ext_resource type="PackedScene" uid="uid://pnldkxgdpxnl" path="res://scenes/Player.tscn" id="2_fx653"]
@@ -7,9 +7,10 @@
 [ext_resource type="PackedScene" uid="uid://gpsobeju6uer" path="res://scenes/Flower.tscn" id="5_rlakn"]
 [ext_resource type="PackedScene" uid="uid://gfjjebi8mj0e" path="res://scenes/Droplet.tscn" id="6_lf62n"]
 [ext_resource type="Script" path="res://scripts/wire_3.gd" id="7_m01gn"]
-[ext_resource type="PackedScene" uid="uid://d3cfdfyv55d2b" path="res://scenes/WaterNeeded.tscn" id="8_ntw2w"]
+[ext_resource type="PackedScene" uid="uid://cqbowuapjvrrr" path="res://scenes/WaterNeeded.tscn" id="8_ntw2w"]
 [ext_resource type="Script" path="res://scripts/wire_4.gd" id="9_6u6bt"]
 [ext_resource type="Script" path="res://scripts/wire_5.gd" id="10_8onj4"]
+[ext_resource type="Texture2D" uid="uid://cw08bqx08wv32" path="res://assets/world/backGround.png" id="11_q2rt1"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1hvu6"]
 texture = ExtResource("2_hsfsg")
@@ -153,3 +154,13 @@ script = ExtResource("10_8onj4")
 [node name="WaterNeeded" parent="Wire5" instance=ExtResource("8_ntw2w")]
 position = Vector2(-1, -1)
 drops_needed = 1
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0.05, 0.05)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2(473, -77)
+scale = Vector2(1.07695, 0.950925)
+texture = ExtResource("11_q2rt1")
